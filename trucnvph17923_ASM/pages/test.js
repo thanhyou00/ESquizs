@@ -1,30 +1,5 @@
-var mybutton = document.querySelector(".backTop");
-
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 200 ||
-    document.documentElement.scrollTop > 200
-  ) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
-// module
-
 const app = angular.module("myapp", []);
 
-// controller
 app.controller("myctrl", ($scope) => {
   $scope.course = [
     {
@@ -86,6 +61,46 @@ app.controller("myctrl", ($scope) => {
       Id: "JAAV",
       Name: "Lập trình Java nâng cao",
       Logo: "JAAV.svg",
+    },
+    {
+      Id: "JABS",
+      Name: "Lập trình hướng đối tượng với Java",
+      Logo: "JABS.svg",
+    },
+    {
+      Id: "JSPR",
+      Name: "Lập trình JavaScript",
+      Logo: "JSPR.svg",
+    },
+    {
+      Id: "LAYO",
+      Name: "Thiết kế layout",
+      Logo: "LAYO.svg",
+    },
+    {
+      Id: "MOWE",
+      Name: "Thiết kế web cho điện thoại di động",
+      Logo: "MOWE.svg",
+    },
+    {
+      Id: "PHPP",
+      Name: "Lập trình PHP",
+      Logo: "PHPP.svg",
+    },
+    {
+      Id: "PMAG",
+      Name: "Quản lý dự án với Agile",
+      Logo: "PMAG.svg",
+    },
+    {
+      Id: "VBPR",
+      Name: "Lập trình VB.NET",
+      Logo: "VBPR.svg",
+    },
+    {
+      Id: "WEBU",
+      Name: "Xây dựng trang web",
+      Logo: "WEBU.svg",
     },
   ];
 });

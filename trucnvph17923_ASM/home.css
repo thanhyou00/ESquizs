@@ -17,3 +17,8 @@ html {
     transition: 0.5s;
     display: none;
 }
+
+.po-fixed {
+    position: fixed;
+    z-index: 999;
+}
