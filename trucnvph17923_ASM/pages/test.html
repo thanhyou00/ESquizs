@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ESquizz | Trang chủ</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="test.css" />
   </head>
-  <body>
+  <body ng-app="myapp" ng-controller="myctrl">
     <div class="container-fluid">
       <!-- Header -->
       <div class="row mb-4">
@@ -32,7 +32,7 @@
                   <a
                     class="nav-link text-white"
                     aria-current="page"
-                    href="../home.html"
+                    href="../index.html"
                     >Trang chủ</a
                   >
                 </li>
@@ -106,7 +106,7 @@
         <div class="row mb-5">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="home.html">Trang chủ</a></li>
+              <li class="breadcrumb-item"><a href="../index.html">Trang chủ</a></li>
               <li class="breadcrumb-item active" aria-current="page">
                 Thi trắc nghiệm
               </li>
@@ -114,19 +114,19 @@
           </nav>
         </div>
         <div class="row">
-          <div class="col-12 col-sm-6">
-            <div class="card mb-3" style="max-width: 540px">
+          <div class="col-12 col-sm-6" ng-repeat="cr in course">
+            <div class="card mb-3 p-4" style="width: 90%">
               <div class="row g-0">
                 <div class="col-md-4">
                   <img
-                    src="./img/PHPP.png"
+                    src="../img/{{cr.Logo}}"
                     class="img-fluid rounded-start"
-                    alt="..."
+                    alt="{{cr.Id}}"
                   />
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <h5 class="card-title">PHP</h5>
+                    <h5 class="card-title">{{cr.Name}}</h5>
                     <p class="card-text">
                       This is a wider card with supporting text below as a
                       natural lead-in to additional content. This content is a
@@ -134,156 +134,7 @@
                     </p>
                     <p class="card-text">
                       <button type="button" class="btn btn-primary">
-                        <a href="#" class="text-white">Tham gia</a>
-                      </button>
-                      <small class="text-muted">Last updated 3 mins ago</small>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6">
-            <div class="card mb-3" style="max-width: 540px">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img
-                    src="./img/DBAV.png"
-                    class="img-fluid rounded-start"
-                    alt="..."
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">SQL Server</h5>
-                    <p class="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
-                    </p>
-                    <p class="card-text">
-                      <button type="button" class="btn btn-primary">
-                        <a href="sql.html" class="text-white">Tham gia</a>
-                      </button>
-                      <small class="text-muted">Last updated 3 mins ago</small>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-sm-6">
-            <div class="card mb-3" style="max-width: 540px">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img
-                    src="./img/ADAV.jpg"
-                    class="img-fluid rounded-start"
-                    alt="..."
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Android nâng cao</h5>
-                    <p class="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
-                    </p>
-                    <p class="card-text">
-                      <button type="button" class="btn btn-primary">
-                        <a href="#" class="text-white">Tham gia</a>
-                      </button>
-                      <small class="text-muted">Last updated 3 mins ago</small>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6">
-            <div class="card mb-3" style="max-width: 540px">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img
-                    src="./img/ASNE.png"
-                    class="img-fluid rounded-start"
-                    alt="..."
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">ASP .NET</h5>
-                    <p class="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
-                    </p>
-                    <p class="card-text">
-                      <button type="button" class="btn btn-primary">
-                        <a href="#" class="text-white">Tham gia</a>
-                      </button>
-                      <small class="text-muted">Last updated 3 mins ago</small>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-sm-6">
-            <div class="card mb-3" style="max-width: 540px">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img
-                    src="./img/JABS.png"
-                    class="img-fluid rounded-start"
-                    alt="..."
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Java OOP</h5>
-                    <p class="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
-                    </p>
-                    <p class="card-text">
-                      <button type="button" class="btn btn-primary">
-                        <a href="#" class="text-white">Tham gia</a>
-                      </button>
-                      <small class="text-muted">Last updated 3 mins ago</small>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6">
-            <div class="card mb-3" style="max-width: 540px">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img
-                    src="./img/JSPR.png"
-                    class="img-fluid rounded-start"
-                    alt="..."
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Javascript</h5>
-                    <p class="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
-                    </p>
-                    <p class="card-text">
-                      <button type="button" class="btn btn-primary">
-                        <a href="#" class="text-white">Tham gia</a>
+                        <a href="./tests/quizs.html" class="text-white">Tham gia</a>
                       </button>
                       <small class="text-muted">Last updated 3 mins ago</small>
                     </p>
@@ -542,5 +393,7 @@
     <script src="../js/jquery.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/angularjs.min.js"></script>
+    <script src="test.js"></script>
   </body>
 </html>

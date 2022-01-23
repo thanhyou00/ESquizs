@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ESquizz | Trang chủ</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
   </head>
-  <body ng-app="myapp" ng-controller="myctrl">
+  <body>
     <div class="container-fluid">
       <!-- Header -->
       <div class="row mb-4">
@@ -32,28 +31,28 @@
                   <a
                     class="nav-link text-white"
                     aria-current="page"
-                    href="home.html"
+                    href="../../index.html"
                     >Trang chủ</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="pages/test.html"
+                  <a class="nav-link text-white" href="../test.html"
                     >Thi trắc nghiệm</a
                   >
-                </li> 
+                </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="pages/introduce.html"
+                  <a class="nav-link text-white" href="../introduce.html"
                     >Giới thiệu</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="pages/contact.html">Liên hệ</a>
+                  <a class="nav-link text-white" href="../contact.html">Liên hệ</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="pages/feedback.html">Góp ý</a>
+                  <a class="nav-link text-white" href="../feedback.html">Góp ý</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="pages/ask.html">Hỏi đáp</a>
+                  <a class="nav-link text-white" href="../ask.html">Hỏi đáp</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a
@@ -70,9 +69,11 @@
                     class="dropdown-menu"
                     aria-labelledby="navbarDropdownMenuLink"
                   >
-                    <li><a class="dropdown-item" href="pages/login.html">Đăng nhập</a></li>
                     <li>
-                      <a class="dropdown-item" href="pages/signup.html">Đăng ký</a>
+                      <a class="dropdown-item" href="../login.html">Đăng nhập</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="../signup.html">Đăng ký</a>
                     </li>
                     <li>
                       <button
@@ -86,7 +87,9 @@
 
                     <hr />
                     <li>
-                      <a class="dropdown-item" href="pages/edit-acc.html">Sửa tài khoản</a>
+                      <a class="dropdown-item" href="../edit-acc.html"
+                        >Sửa tài khoản</a
+                      >
                     </li>
                   </ul>
                 </li>
@@ -95,98 +98,258 @@
           </div>
         </nav>
       </div>
-      <!-- Slide -->
-      <br />
-      <br />
-      <br />
-      <div class="row">
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <!-- Test -->
+      <div class="container mt-5">
+          <div class="row mb-5">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../../index.html">Trang chủ</a></li>
+                  <li class="breadcrumb-item"><a href="test.html">Thi trắc nghiệm</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">SQL Server</li>
+                </ol>
+              </nav>
           </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="./img/undraw_new_message_re_fp03.svg" class="d-block w-100" style="height: 400px;" alt="...">
-              <div class="carousel-caption d-none d-md-block text-dark">
-                <h4>First slide label</h4>
-                <p>Some representative placeholder content for the first slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="./img/undraw_lightbulb_moment_re_ulyo.svg" class="d-block w-100" style="height: 400px;" alt="...">
-              <div class="carousel-caption d-none d-md-block text-dark">
-                <h4>Second slide label</h4>
-                <p>Some representative placeholder content for the second slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="./img/undraw_pair_programming_re_or4x.svg" class="d-block w-100" style="height: 400px;" alt="...">
-              <div class="carousel-caption d-none d-md-block text-dark">
-                <h4>Third slide label</h4>
-                <p>Some representative placeholder content for the third slide.</p>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-      <br />
-      <br />
-      <hr>
-      <!-- List -->
-      <div class="container-fluid">
-        <div class="row pt-5 mt-5">
-          <div class="col-12 col-sm-5 col-md-5 col-lg-3">
+        <div class="row mt-4">
             <div class="card">
-              <div class="card-header bg-primary text-white">
-                <h5>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
-                    <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"/>
-                  </svg>
-                  Đáng chú ý
-                </h5>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Quản lý dự án với Agile</li>
-                <li class="list-group-item">Kiểm thử cơ bản</li>
-                <li class="list-group-item">Kiểm thử nâng cao</li>
-                <li class="list-group-item">Dự án mẫu</li>
-                <li class="list-group-item">Lập trình Java 4</li>
-                <li class="list-group-item">Frontend Framework</li>
-                <li class="list-group-item">Dự án 1</li>
-                <li class="list-group-item">Lập trình Java 5</li>
-                <li class="list-group-item">Lập trình Java 6</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-12 col-sm-7 col-md-7 col-lg-9">
-            <div class="row">
-              <h4 class="card-header bg-primary text-white">Tham gia nhiều</h4>
-              <div class="col-12 col-lg-3 " ng-repeat="cr in course" style="height: 100%;">
-                <div class="card mt-3">
-                  <img src="./img/{{cr.Logo}}" class="card-img-top" alt="..." style="width: 90%">
-                  <div class="card-body">
-                    <h5 class="card-title">{{cr.Name}}</h5>
-                  </div>
-                  <div class="card-footer">
-                    <p class="card-text">This is a longer card with sttle.</p>
+                <div class="card-header row text-white bg-success" style="width: 100%;">
+                  <h4 class="col-11">1. Which SQL statement is used to insert new data in a database?</h4>
+                  <div class="col-1">
+                    <span class="badge bg-primary">10 điểm</span>
                   </div>
                 </div>
+                <div class="card-body">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          ADD RECORD
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          INSERT NEW
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          ADD NEW 
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          INSERT INTO
+                        </label>
+                      </div>
+                </div>
+              </div>
+        </div> 
+        <div class="row mt-4">
+            <div class="card">
+                <div class="card-header row text-white bg-success" style="width: 100%;">
+                  <h4 class="col-11">2. Which SQL statement is used to update data in a database?</h4>
+                  <div class="col-1">
+                    <span class="badge bg-primary">10 điểm</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          UPDATE
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          SAVE
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          MODIFY
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          SAVE AS
+                        </label>
+                      </div>
+                </div>
+              </div>
+        </div> 
+        <div class="row mt-4">
+            <div class="card">
+                <div class="card-header row text-white bg-success" style="width: 100%;">
+                  <h4 class="col-11">3. Which SQL statement is used to extract data from a database? ?</h4>
+                  <div class="col-1">
+                    <span class="badge bg-primary">10 điểm</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          GET
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          EXTRACT
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          SELECT
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          OPEN
+                        </label>
+                      </div>
+                </div>
+              </div>
+        </div> 
+        <div class="row mt-4">
+            <div class="card">
+                <div class="card-header row text-white bg-success" style="width: 100%;">
+                  <h4 class="col-11">4. With SQL, how do you select a column named "FirstName" from a table named "Persons"?</h4>
+                  <div class="col-1">
+                    <span class="badge bg-primary">10 điểm</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            EXTRACT FirstName FROM Persons
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            SELECT Persons.FirstName
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            SELECT FirstName FROM Persons
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            SELECT FirstName * FROM Persons
+                        </label>
+                      </div>
+                </div>
+              </div>
+        </div> 
+        <div class="row mt-4">
+            <div class="card">
+                <div class="card-header row text-white bg-success" style="width: 100%;">
+                  <h4 class="col-11">5. Which SQL statement is used to extract data from a database? ?</h4>
+                  <div class="col-1">
+                    <span class="badge bg-primary">10 điểm</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          GET
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          EXTRACT
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          SELECT
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          OPEN
+                        </label>
+                      </div>
+                </div>
+              </div>
+        </div>  
+        <!-- Result -->
+        <div class="row mt-5">
+            <div class="card collapse multi-collapse" id="multiCollapseExample1">
+              <div class="card-body row " >
+                <div class="col-12 col-sm-12 col-md-6" >
+                  <div class="d-flex justify-content-center text-center">
+                    <h4>Chúc mừng bạn đã hoàn thành bài thi !</h4>
+                   </div>
+                   <div class="d-flex justify-content-center text-center">
+                    <img src="./img/undraw_well_done_i2wr.svg" style="width: 50%;height: 50%;" alt="">
+                   </div>
+                </div>
+                 <div class="col-12 col-sm-12 col-md-6" style="padding-top: 5%;">
+                   <h5>Điểm của bạn : <span>50 điểm</span></h5>
+                   <h5>Tổng số câu trả lời đúng : <span>5/5 câu</span></h5>
+                   <h5>Tổng thời gian hoàn thành : <span>5 phút 56 giây</span></h5>
+                   <h5>Thời gian trung bình mỗi câu : <span>1 phút 20 giây</span></h5>
+                   <h5>Điểm tích lũy : <span>+ 1</span></h5>
+                 </div>
               </div>
             </div>
+        </div>
+        <!-- Submit -->
+        <div class="row mt-5">
+            <a type="button" class="btn btn-primary" id="liveToastBtn" 
+            aria-expanded="false" aria-controls="multiCollapseExample1"
+            data-bs-toggle="collapse" href="#multiCollapseExample1"
+            >Kiểm tra kết quả</a>
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+              <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="alert alert-success d-flex align-items-center" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-all" viewBox="0 0 16 16">
+                            <path d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0l7-7zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0z"/>
+                            <path d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708z"/>
+                          </svg>
+                        <div>
+                            Aww yeah, you successfully read this important alert message
+                        </div>
+                      </div>
+              </div>
             </div>
-          </div>
+        </div>
+        <!-- Pagination -->
+        <div class="row mt-5">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
-
       <!-- Footer -->
       <!-- Change pass -->
       <div
@@ -398,7 +561,7 @@
             <br />
             <iframe
               width="100%"
-              height="150"
+              height="200"
               src="https://www.youtube.com/embed/UJg1w9pbNvo"
               title="YouTube video player"
               frameborder="0"
@@ -412,21 +575,12 @@
           </p>
         </div>
       </footer>
-      <!-- Back to top -->
-      <div>
-        <button class="backTop" onclick="topFunction()">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle text-white" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
-          </svg>
-        </button>
-      </div>
     </div>
-  </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/angularjs.min.js"></script>
-    <script src="home.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/popper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/angularjs.min.js"></script>
+    <script src="../../databases/ADAV.js"></script>
   </body>
 </html>

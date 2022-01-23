@@ -1,15 +1,90 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Uploaded to SVGRepo https://www.svgrepo.com -->
-    <title>game</title>
-    <desc>Created with Sketch.</desc>
-    <g id="game" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
-        <rect width="48" height="48" fill="white" fill-opacity="0.01"/>
-        <g id="编组" transform="translate(4.000000, 4.000000)" stroke-width="4">
-            <path d="M34.5120527,5.53620381 C30.8466015,2.10248672 25.9188318,0 20.5,0 C9.17816263,0 1.98951966e-13,9.17816263 1.98951966e-13,20.5 C1.98951966e-13,31.8218374 9.17816263,41 20.5,41 C26.1148083,41 31.2023928,38.742687 34.9047551,35.0860595 L20,20 L34.5120527,5.53620381 Z" id="路径" stroke="#000000" fill="#2F88FF" fill-rule="nonzero"></path>
-            <circle id="椭圆形" stroke="#000000" fill="#2F88FF" fill-rule="nonzero" cx="36" cy="20" r="4"></circle>
-            <path d="M13,9 L13,17" id="Path-21" stroke="#FFFFFF" stroke-linecap="round"></path>
-            <path d="M9,13 L17,13" id="Path-21-Copy-2" stroke="#FFFFFF" stroke-linecap="round"></path>
-        </g>
-    </g>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 297.001 297.001" style="enable-background:new 0 0 297.001 297.001;" xml:space="preserve">
+<g>
+	<g>
+		<g>
+			<g>
+				<circle style="fill:#2ECC71;" cx="148.501" cy="148.5" r="148.5"/>
+			</g>
+		</g>
+	</g>
+	<path style="fill:#28A359;" d="M296.524,136.592l-34.547-34.547L37.781,197.608l98.882,98.923c3.906,0.308,7.853,0.47,11.838,0.47
+		c82.014,0,148.5-66.486,148.5-148.5C297,144.491,296.836,140.521,296.524,136.592z"/>
+	<g>
+		<path style="fill:#474D51;" d="M118.959,74.25h-18.917c-1.68,0-3.042,1.362-3.042,3.041v6.417c0,1.68,1.362,3.041,3.042,3.041
+			h18.917c1.68,0,3.041-1.362,3.041-3.041v-6.417C122.001,75.612,120.639,74.25,118.959,74.25z"/>
+	</g>
+	<g>
+		<path style="fill:#474D51;" d="M153.958,74.25h-18.917c-1.68,0-3.042,1.362-3.042,3.041v6.417c0,1.68,1.362,3.041,3.042,3.041
+			h18.917c1.68,0,3.042-1.362,3.042-3.041v-6.417C157.001,75.612,155.639,74.25,153.958,74.25z"/>
+	</g>
+	<g>
+		<path style="fill:#32373B;" d="M82.251,214.75h132.5c36.589,0,66.25-29.661,66.25-66.25l0,0c0-36.589-29.661-66.25-66.25-66.25
+			h-132.5c-36.589,0-66.25,29.661-66.25,66.25l0,0C16.001,185.089,45.662,214.75,82.251,214.75z"/>
+	</g>
+	<g>
+		<path style="fill:#D0D5D9;" d="M97.007,190.5h102.988c3.455,0,6.256-2.801,6.256-6.256v-71.488c0-3.455-2.801-6.256-6.256-6.256
+			H97.007c-3.455,0-6.256,2.801-6.256,6.256v71.488C90.751,187.699,93.552,190.5,97.007,190.5z"/>
+	</g>
+	<g>
+		<g>
+			<polygon style="fill:#D0D5D9;" points="64.961,136.92 57.751,141.29 50.541,136.92 50.541,122.5 64.961,122.5 			"/>
+		</g>
+		<g>
+			<polygon style="fill:#D0D5D9;" points="50.541,160.08 57.751,155.71 64.961,160.08 64.961,174.5 50.541,174.5 			"/>
+		</g>
+		<g>
+			<polygon style="fill:#D0D5D9;" points="69.331,155.71 64.961,148.5 69.331,141.29 83.751,141.29 83.751,155.71 			"/>
+		</g>
+		<g>
+			<polygon style="fill:#D0D5D9;" points="46.171,141.29 50.541,148.5 46.171,155.71 31.751,155.71 31.751,141.29 			"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<circle style="fill:#D0D5D9;" cx="247.501" cy="134.018" r="8.519"/>
+		</g>
+		<g>
+			<circle style="fill:#D0D5D9;" cx="247.501" cy="162.982" r="8.519"/>
+		</g>
+		<g>
+			<circle style="fill:#D0D5D9;" cx="261.982" cy="148.5" r="8.519"/>
+		</g>
+		<g>
+			<circle style="fill:#D0D5D9;" cx="233.02" cy="148.5" r="8.519"/>
+		</g>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
 </svg>

@@ -22,3 +22,9 @@ html {
     position: fixed;
     z-index: 999;
 }
+.eff img{
+    transition: 2s;
+}
+.eff img:hover {
+    transform: scale(1.2);
+}
