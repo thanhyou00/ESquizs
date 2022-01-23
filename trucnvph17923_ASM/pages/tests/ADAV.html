@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ESquizz | Trang chủ</title>
+    <title>ESquizz | Android nâng cao</title>
     <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="ADAV.css">
+    <link rel="shortcut icon" href="../../img/avt.svg" type="image/x-icon">
   </head>
-  <body>
+  <body ng-app="myapp" ng-controller="myctrl">
     <div class="container-fluid">
       <!-- Header -->
       <div class="row mb-4">
@@ -109,186 +111,24 @@
                 </ol>
               </nav>
           </div>
-        <div class="row mt-4">
+        <div class="row mt-4" ng-repeat="ad in adav">
             <div class="card">
                 <div class="card-header row text-white bg-success" style="width: 100%;">
-                  <h4 class="col-11">1. Which SQL statement is used to insert new data in a database?</h4>
+                  <h5 class="col-11">[{{ad.Id}}] {{ad.Text}}</h5>
                   <div class="col-1">
-                    <span class="badge bg-primary">10 điểm</span>
+                    <span class="badge bg-primary">{{ad.Marks}} điểm</span>
                   </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body" ng-repeat="as in ad.Answers">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                         <label class="form-check-label" for="flexRadioDefault1">
-                          ADD RECORD
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          INSERT NEW
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          ADD NEW 
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          INSERT INTO
+                           {{as.Text}}
                         </label>
                       </div>
                 </div>
               </div>
         </div> 
-        <div class="row mt-4">
-            <div class="card">
-                <div class="card-header row text-white bg-success" style="width: 100%;">
-                  <h4 class="col-11">2. Which SQL statement is used to update data in a database?</h4>
-                  <div class="col-1">
-                    <span class="badge bg-primary">10 điểm</span>
-                  </div>
-                </div>
-                <div class="card-body">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          UPDATE
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          SAVE
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          MODIFY
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          SAVE AS
-                        </label>
-                      </div>
-                </div>
-              </div>
-        </div> 
-        <div class="row mt-4">
-            <div class="card">
-                <div class="card-header row text-white bg-success" style="width: 100%;">
-                  <h4 class="col-11">3. Which SQL statement is used to extract data from a database? ?</h4>
-                  <div class="col-1">
-                    <span class="badge bg-primary">10 điểm</span>
-                  </div>
-                </div>
-                <div class="card-body">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          GET
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          EXTRACT
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          SELECT
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          OPEN
-                        </label>
-                      </div>
-                </div>
-              </div>
-        </div> 
-        <div class="row mt-4">
-            <div class="card">
-                <div class="card-header row text-white bg-success" style="width: 100%;">
-                  <h4 class="col-11">4. With SQL, how do you select a column named "FirstName" from a table named "Persons"?</h4>
-                  <div class="col-1">
-                    <span class="badge bg-primary">10 điểm</span>
-                  </div>
-                </div>
-                <div class="card-body">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            EXTRACT FirstName FROM Persons
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            SELECT Persons.FirstName
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            SELECT FirstName FROM Persons
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            SELECT FirstName * FROM Persons
-                        </label>
-                      </div>
-                </div>
-              </div>
-        </div> 
-        <div class="row mt-4">
-            <div class="card">
-                <div class="card-header row text-white bg-success" style="width: 100%;">
-                  <h4 class="col-11">5. Which SQL statement is used to extract data from a database? ?</h4>
-                  <div class="col-1">
-                    <span class="badge bg-primary">10 điểm</span>
-                  </div>
-                </div>
-                <div class="card-body">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          GET
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          EXTRACT
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          SELECT
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          OPEN
-                        </label>
-                      </div>
-                </div>
-              </div>
-        </div>  
         <!-- Result -->
         <div class="row mt-5">
             <div class="card collapse multi-collapse" id="multiCollapseExample1">
@@ -298,7 +138,7 @@
                     <h4>Chúc mừng bạn đã hoàn thành bài thi !</h4>
                    </div>
                    <div class="d-flex justify-content-center text-center">
-                    <img src="./img/undraw_well_done_i2wr.svg" style="width: 50%;height: 50%;" alt="">
+                    <img src="../../img/undraw_well_done_i2wr.svg" style="width: 50%;height: 50%;" alt="">
                    </div>
                 </div>
                  <div class="col-12 col-sm-12 col-md-6" style="padding-top: 5%;">
@@ -575,6 +415,14 @@
           </p>
         </div>
       </footer>
+      <!-- Back to top -->
+            <div>
+              <button class="backTop" onclick="topFunction()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle text-white" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                </svg>
+              </button>
+            </div>
     </div>
 
     <script src="../../js/jquery.min.js"></script>

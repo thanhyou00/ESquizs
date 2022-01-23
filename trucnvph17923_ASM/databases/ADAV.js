@@ -1,3 +1,27 @@
+// back to top
+
+var mybutton = document.querySelector(".backTop");
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 200 ||
+    document.documentElement.scrollTop > 200
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+// sucess
 var toastTrigger = document.getElementById("liveToastBtn");
 var toastLiveExample = document.getElementById("liveToast");
 if (toastTrigger) {
@@ -13,7 +37,7 @@ if (toastTrigger) {
 const app = angular.module("myapp", []);
 
 app.controller("myctrl", ($scope) => {
-  $scope.quizs = [
+  $scope.adav = [
     {
       Id: 25106,
       Text: "Có mấy loại Service?",

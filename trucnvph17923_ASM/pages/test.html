@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ESquizz | Trang chủ</title>
+    <title>ESquiz | Trắc nghiệm</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="test.css" />
+    <link rel="shortcut icon" href="../img/avt.svg" type="image/x-icon">
   </head>
   <body ng-app="myapp" ng-controller="myctrl">
     <div class="container-fluid">
@@ -14,7 +15,7 @@
       <div class="row mb-4">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark po-fixed">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">ESquizz</a>
+            <a class="navbar-brand" href="#">ESquiz</a>
             <button
               class="navbar-toggler"
               type="button"
@@ -134,7 +135,7 @@
                     </p>
                     <p class="card-text">
                       <button type="button" class="btn btn-primary">
-                        <a href="./tests/quizs.html" class="text-white">Tham gia</a>
+                        <a href="./tests/{{cr.Id}}.html" class="text-white">Tham gia</a>
                       </button>
                       <small class="text-muted">Last updated 3 mins ago</small>
                     </p>
