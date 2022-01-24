@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ESquizz | Android cơ bản</title>
+    <title>ESquizz | Kiểm thử Android</title>
     <link rel="stylesheet" href="../../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="ADBS.css">
+    <link rel="stylesheet" href="ADTE.css">
     <link rel="shortcut icon" href="../../img/avt.svg" type="image/x-icon">
   </head>
   <body ng-app="myapp" ng-controller="myctrl">
@@ -107,12 +107,12 @@
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="../../index.html">Trang chủ</a></li>
                   <li class="breadcrumb-item"><a href="test.html">Thi trắc nghiệm</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Android cơ bản</li>
+                  <li class="breadcrumb-item active" aria-current="page">Kiểm thử Android</li>
                 </ol>
               </nav>
           </div>
         <div class="row mt-4" ng-repeat="ad in adbs">
-            <div class="card">
+            <div class="card col-12">
                 <div class="card-header row text-white bg-success" style="width: 100%;">
                   <h5 class="col-11">[{{ad.Id}}] {{ad.Text}}</h5>
                   <div class="col-1">
@@ -121,7 +121,7 @@
                 </div>
                 <div class="card-body" ng-repeat="as in ad.Answers">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <input class="form-check-input" type="radio" name="{{ad.Id}}" id="flexRadioDefault1">
                         <label class="form-check-label" for="flexRadioDefault1">
                            {{as.Text}}
                         </label>
@@ -429,6 +429,6 @@
     <script src="../../js/popper.min.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/angularjs.min.js"></script>
-    <script src="../../databases/ADBS.js"></script>
+    <script src="../../databases/ADTE.js"></script>
   </body>
 </html>

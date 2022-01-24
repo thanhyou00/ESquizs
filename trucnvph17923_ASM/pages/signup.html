@@ -8,29 +8,44 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="shortcut icon" href="../img/avt.svg" type="image/x-icon">
   </head>
-  <body>
+  <body ng-app="myapp" ng-controller="myctrl">
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-5 pt-5">
                 <h2 class="pt-5">ESQUIZ</h2>
-                <form action="" class="">
+                <form action="" name="formUser">
                     <h2>Đăng ký</h2>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Tên đăng nhập</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" required
+                        oninvalid="this.setCustomValidity('Vui lòng nhập tên đăng nhập')"
+                        onchange="this.setCustomValidity('')"
+                        name="username"
+                        >
                       </div>
                       <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required
+                        oninvalid="this.setCustomValidity('Vui lòng nhập email')"
+                        onchange="this.setCustomValidity('')"
+                        name="email"
+                        >
                       </div>
                       <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Mật khẩu</label>
-                        <input type="password" class="form-control" id="exampleFormControlInput1">
+                        <input type="password" class="form-control" id="exampleFormControlInput1" required
+                        oninvalid="this.setCustomValidity('Vui lòng nhập mật khẩu')"
+                        onchange="this.setCustomValidity('')"
+                        name="pass"
+                        >
                       </div>
                       <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Mật khẩu xác nhận</label>
-                        <input type="password" class="form-control" id="exampleFormControlInput1">
+                        <input type="password" class="form-control" id="exampleFormControlInput1" required
+                        oninvalid="this.setCustomValidity('Vui lòng nhập mật khẩu xác nhận')"
+                        onchange="this.setCustomValidity('')"
+                        name="repass"
+                        >
                       </div>
                       <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
@@ -52,5 +67,7 @@
     <script src="../js/jquery.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/angularjs.min.js"></script>
+    <script src="login.js"></script>
   </body>
 </html>
