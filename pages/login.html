@@ -37,8 +37,43 @@
                             <label class="form-check-label" for="flexCheckChecked">
                               Ghi nhớ đăng nhập
                             </label>
-                            <span class="text-right"><a href="signup.html">Đăng ký ngay ?</a></span>
+                            <span class="text-right px-3"><a class="text-decoration-none" href="signup.html">Đăng ký ngay ?</a></span>
+                            <span 
+                            class="text-right px-2 text-primary"
+                            style="cursor: pointer;"
+                            data-bs-toggle="modal"
+                            data-bs-target="#model-pass"
+                            >Quên mật khẩu ?</span>
                       </div>
+                      <!-- Forgot password -->
+                      <form action="">
+                        <div class="modal fade" id="model-pass" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Quên mật khẩu</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="form-group">
+                                  <label class="mb-3" for="">Email</label>
+                                  <input type="text" class="form-control">
+                                  <label class="mb-3 mt-2" for="">Mã xác nhận</label>
+                                  <input type="text" class="form-control mb-3">
+
+                                  <div class="g-recaptcha" data-sitekey="6LeaFjYeAAAAAD9GD_mjTtk5vNInxQIA09us9Enn"></div>
+                                  <br/>
+                                  <input type="submit" value="Submit">
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                <button type="button" class="btn btn-primary">Lấy lại mật khẩu</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
                       <br>
                       <button type="submit" class="btn btn-primary" ng-click="submit(user, pass)">Đăng nhập</button>
                 </form>
@@ -49,6 +84,7 @@
         </div>
     </div>
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
