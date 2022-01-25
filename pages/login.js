@@ -41,6 +41,8 @@ app.controller("myctrl", ($scope) => {
     for (var i = 0; i < $scope.students.length; i++) {
       if ((user === $scope.students[i].username)&&(pass === $scope.students[i].password)) $scope.flag++;
     }
-    ($scope.flag==1)?alert("Đăng nhập thành công !"):alert("Sai tên đăng nhập hoặc mật khẩu !");
+    if(user.length>=1) {
+      ($scope.flag==1)?alert("Đăng nhập thành công !"):alert("Sai tên đăng nhập hoặc mật khẩu !");
+    }
   };
 });
