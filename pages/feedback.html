@@ -6,11 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ESquiz | Góp ý</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="feedback.css">
-    <link rel="shortcut icon" href="../img/avt.svg" type="image/x-icon">
+    <link rel="stylesheet" href="feedback.css" />
+    <link rel="shortcut icon" href="../img/avt.svg" type="image/x-icon" />
   </head>
   <body>
     <div class="container-fluid">
+      <!-- SDK -->
+      <div id="fb-root"></div>
+      <script
+        async
+        defer
+        crossorigin="anonymous"
+        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0"
+        nonce="znwdDVmL"
+      ></script>
       <!-- Header -->
       <div class="row mb-4">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark po-fixed">
@@ -41,7 +50,7 @@
                   <a class="nav-link text-white" href="test.html"
                     >Thi trắc nghiệm</a
                   >
-                </li> 
+                </li>
                 <li class="nav-item">
                   <a class="nav-link text-white" href="introduce.html"
                     >Giới thiệu</a
@@ -71,7 +80,9 @@
                     class="dropdown-menu"
                     aria-labelledby="navbarDropdownMenuLink"
                   >
-                    <li><a class="dropdown-item" href="login.html">Đăng nhập</a></li>
+                    <li>
+                      <a class="dropdown-item" href="login.html">Đăng nhập</a>
+                    </li>
                     <li>
                       <a class="dropdown-item" href="signup.html">Đăng ký</a>
                     </li>
@@ -87,7 +98,9 @@
 
                     <hr />
                     <li>
-                      <a class="dropdown-item" href="edit-acc.html">Sửa tài khoản</a>
+                      <a class="dropdown-item" href="edit-acc.html"
+                        >Sửa tài khoản</a
+                      >
                     </li>
                   </ul>
                 </li>
@@ -182,11 +195,13 @@
       <div class="container mt-5">
         <div class="row mb-5">
           <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="../index.html">Trang chủ</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Góp ý</li>
-              </ol>
-            </nav>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="../index.html">Trang chủ</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">Góp ý</li>
+            </ol>
+          </nav>
         </div>
         <div class="row">
           <div class="card">
@@ -274,6 +289,14 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="row">
+          <div
+            class="fb-comments"
+            data-href="https://thanhyou00.github.io/quiz/pages/feedback.html"
+            data-width="100%"
+            data-numposts="5"
+          ></div>
         </div>
       </div>
       <!-- Footer -->
