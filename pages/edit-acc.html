@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ESquiz | Giới thiệu</title>
+    <title>ESquiz | Tài khoản</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="edit.css">
     <link rel="shortcut icon" href="../img/avt.svg" type="image/x-icon">
   </head>
-  <div>
+  <body ng-app="myapp" ng-controller="myctrl">
     <div class="container-fluid">
       <!-- Header -->
       <div class="row mb-4">
@@ -192,7 +192,7 @@
                     <img src="../img/avt.svg" class="card-img-top rounded-circle p-3" alt="avt">
                     <div class="card-body">
                         <hr>
-                      <h5 class="card-title">Nguyen Van A</h5>
+                      <h5 class="card-title">{{fullname}}</h5>
                       <p class="card-text">
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
@@ -322,10 +322,11 @@
       </div>
   </footer>
   </div>
-</div>
 
-<script src="../js/jquery.min.js"></script>
-<script src="../js/popper.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+      <script src="../js/jquery.min.js"></script>
+      <script src="../js/popper.min.js"></script>
+      <script src="../js/bootstrap.min.js"></script>
+      <script src="../js/angularjs.min.js"></script>
+      <script src="login.js"></script>
   </body>
 </html>

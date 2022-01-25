@@ -36,13 +36,21 @@ app.controller("myctrl", ($scope) => {
   ];
 
   // handler login
+  $scope.fullname = "Người mới chơi";
   $scope.submit = (user, pass) => {
     $scope.flag = 0;
     for (var i = 0; i < $scope.students.length; i++) {
-      if ((user === $scope.students[i].username)&&(pass === $scope.students[i].password)) $scope.flag++;
+      // Validate
+      if ((user === $scope.students[i].username)&&(pass === $scope.students[i].password)) {
+        // flag
+        $scope.flag++;
+        // info acc
+        $scope.fullname = $scope.students[i].fullname;
+      }
     }
     if(user.length>=1) {
       ($scope.flag==1)?alert("Đăng nhập thành công !"):alert("Sai tên đăng nhập hoặc mật khẩu !");
     }
   };
+
 });

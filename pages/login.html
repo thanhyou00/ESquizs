@@ -13,11 +13,12 @@
         <div class="row">
             <div class="col-12 col-sm-5 pt-5">
                 <h2 class="pt-5">ESQUIZ</h2>
-                <form action="" name="formUser" method="post">
+                <form action="../index.html" name="formUser" method="post">
                     <h2>Đăng nhập</h2>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Tên đăng nhập</label>
-                        <input type="text"  class="form-control" id="exampleFormControlInput1" required
+                        <input type="text"  class="form-control" id="exampleFormControlInput1" 
+                        required
                         oninvalid="this.setCustomValidity('Vui lòng nhập tên đăng nhập')"
                         onchange="this.setCustomValidity('')"
                         name="username" 
@@ -25,15 +26,16 @@
                         >
                       </div>
                       <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Mật khẩu</label>
-                        <input type="password" name="password" class="form-control" id="exampleFormControlInput1" required
+                        <label for="passwo" class="form-label">Mật khẩu</label>
+                        <input type="password" name="password" class="form-control" id="passwo" 
+                        required
                         oninvalid="this.setCustomValidity('Vui lòng nhập mật khẩu')"
                         onchange="this.setCustomValidity('')"
                         ng-model="pass"
                         >
                       </div>
                       <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                               Ghi nhớ đăng nhập
                             </label>
@@ -46,7 +48,7 @@
                             >Quên mật khẩu ?</span>
                       </div>
                       <!-- Forgot password -->
-                      <form action="">
+                      <!-- <form action=""> -->
                         <div class="modal fade" id="model-pass" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                           <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
@@ -60,7 +62,6 @@
                                   <input type="text" class="form-control">
                                   <label class="mb-3 mt-2" for="">Mã xác nhận</label>
                                   <input type="text" class="form-control mb-3">
-
                                   <div class="g-recaptcha" data-sitekey="6LeaFjYeAAAAAD9GD_mjTtk5vNInxQIA09us9Enn"></div>
                                   <br/>
                                 </div>
@@ -72,7 +73,7 @@
                             </div>
                           </div>
                         </div>
-                      </form>
+                      <!-- </form> -->
                       <br>
                       <button type="submit" class="btn btn-primary" ng-click="submit(user, pass)">Đăng nhập</button>
                 </form>
