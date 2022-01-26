@@ -51,8 +51,11 @@ app.controller("myctrl", ($scope) => {
         $scope.fullname = $scope.students[i].fullname;
       }
     }
-    if(user.length>=1) {
-      ($scope.flag==1)?alert("Đăng nhập thành công !"):alert("Sai tên đăng nhập hoặc mật khẩu !");
+
+    if(user.length>=1&&$scope.flag==1){
+      alert("Đăng nhập thành công !")
+    } else {
+      alert("Sai tên đăng nhập hoặc mật khẩu !");
     }
   };
 
