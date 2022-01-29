@@ -1,64 +1,63 @@
-
-      <!-- Test -->
-      <br />
-      <div class="container mt-5">
-        <div class="row mb-5">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="../index.html">Trang chủ</a></li>
-              <li class="breadcrumb-item active" aria-current="page">
-                Thi trắc nghiệm
-              </li>
-            </ol>
-          </nav>
-        </div>
-        <div class="row">
-          <div class="col-12 col-sm-6" ng-repeat="cr in course">
-            <div class="card mb-3 p-4" style="width: 90%">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img
-                    src="../img/{{cr.Logo}}"
-                    class="img-fluid rounded-start"
-                    alt="{{cr.Id}}"
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">{{cr.Name}}</h5>
-                    <p class="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
-                    </p>
-                    <p class="card-text">
-                      <button type="button" class="btn btn-primary">
-                        <a href="#/{{cr.Id}}" class="text-white">Tham gia</a>
-                      </button>
-                      <small class="text-muted">Last updated 3 mins ago</small>
-                    </p>
-                  </div>
-                </div>
-              </div>
+<!-- Test -->
+<br />
+<div class="container mt-5">
+  <div class="row mb-5">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Trang chủ</a></li>
+        <li class="breadcrumb-item active" aria-current="page">
+          Thi trắc nghiệm
+        </li>
+      </ol>
+    </nav>
+  </div>
+  <div class="row">
+    <div class="col-12 col-sm-6" ng-repeat="cr in course">
+      <div class="card mb-3 p-4" style="width: 90%">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="../img/{{cr.Logo}}"
+              class="img-fluid rounded-start"
+              alt="{{cr.Id}}"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{cr.Name}}</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <button type="button" class="btn btn-primary">
+                  <a href="#/{{cr.Id}}" class="text-white" style="text-decoration: none;">Tham gia</a>
+                </button>
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
             </div>
           </div>
         </div>
-        <!-- Pagination -->
-        <div class="row mt-5">
-          <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-              <li class="page-item disabled">
-                <a class="page-link">Previous</a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">4</a></li>
-              <li class="page-item"><a class="page-link" href="#">5</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-       </div> 
+      </div>
+    </div>
+  </div>
+  <!-- Pagination -->
+  <div class="row mt-5">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item"><a class="page-link" href="#">5</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

@@ -1,9 +1,6 @@
-
-
 // module
-const app = angular.module("myapp", []);
 
-app.controller("myctrl", ($scope) => {
+app.controller("ctrlSigup", function ($scope) {
   $scope.students = [
     {
       username: "teonv",

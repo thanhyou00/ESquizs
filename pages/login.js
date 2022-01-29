@@ -1,10 +1,9 @@
 // module
-var app = angular.module("myapp", []);
 
-app.controller("myctrl", ($scope) => {
+app.controller("ctrlLogin", function ($scope) {
   $scope.students = [
     {
-      id : 1234,
+      id: 1234,
       username: "teonv",
       password: "iloveyou",
       fullname: "Nguyễn Văn Tèo",
@@ -15,7 +14,7 @@ app.controller("myctrl", ($scope) => {
       marks: "0",
     },
     {
-      id : 2345,
+      id: 2345,
       username: "pheonv",
       password: "iloveyou",
       fullname: "Nguyễn Văn Chí Phèo",
@@ -26,7 +25,7 @@ app.controller("myctrl", ($scope) => {
       marks: "0",
     },
     {
-      id : 3456,
+      id: 3456,
       username: "nopt",
       password: "iloveyou",
       fullname: "Phạm Thị Nở",
@@ -44,7 +43,10 @@ app.controller("myctrl", ($scope) => {
     $scope.flag = 0;
     for (var i = 0; i < $scope.students.length; i++) {
       // Validate
-      if ((user === $scope.students[i].username)&&(pass === $scope.students[i].password)) {
+      if (
+        user === $scope.students[i].username &&
+        pass === $scope.students[i].password
+      ) {
         // flag
         $scope.flag++;
         // info acc
@@ -52,8 +54,8 @@ app.controller("myctrl", ($scope) => {
       }
     }
 
-    if(user.length>=1&&$scope.flag==1){
-      alert("Đăng nhập thành công !")
+    if (user.length >= 1 && $scope.flag == 1) {
+      alert("Đăng nhập thành công !");
     } else {
       alert("Sai tên đăng nhập hoặc mật khẩu !");
     }
@@ -61,16 +63,22 @@ app.controller("myctrl", ($scope) => {
 
   // get pass
   $scope.getindex = 0;
-  $scope.getpass = (getemail, getid) =>{
+  $scope.getpass = (getemail, getid) => {
     $scope.flagpass = 0;
     for (var i = 0; i < $scope.students.length; i++) {
-      if(getemail==$scope.students[i].email&&getid==$scope.students[i].id) {
+      if (
+        getemail == $scope.students[i].email &&
+        getid == $scope.students[i].id
+      ) {
         $scope.flagpass++;
         $scope.getindex = i;
       }
     }
 
-    ($scope.flagpass==1)?alert("Mật khẩu của bạn là : " + $scope.students[$scope.getindex].password):alert("Nhập sai mã xác nhận")
-  }
-
+    $scope.flagpass == 1
+      ? alert(
+          "Mật khẩu của bạn là : " + $scope.students[$scope.getindex].password
+        )
+      : alert("Nhập sai mã xác nhận");
+  };
 });
