@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="./img/avt.svg" type="image/x-icon" />
   </head>
-  <body ng-app="myapp" ng-controller="myroutes">
+  <body ng-app="myroutes">
     <div class="container-fluid">
       <!-- Header -->
       <div class="row mb-4">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark po-fixed">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#home">ESquiz</a>
+            <a class="navbar-brand" href="#/home">ESquiz</a>
             <button
               class="navbar-toggler"
               type="button"
@@ -33,34 +33,28 @@
                   <a
                     class="nav-link text-white"
                     aria-current="page"
-                    href="#home"
+                    href="#/home"
                     >Trang chủ</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="#test"
+                  <a class="nav-link text-white" href="#/test"
                     >Thi trắc nghiệm</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="#introduce"
+                  <a class="nav-link text-white" href="#/introduce"
                     >Giới thiệu</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="#contact"
-                    >Liên hệ</a
-                  >
+                  <a class="nav-link text-white" href="#/contact">Liên hệ</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="#feedback"
-                    >Góp ý</a
-                  >
+                  <a class="nav-link text-white" href="#feedback">Góp ý</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="#ask"
-                    >Hỏi đáp</a
-                  >
+                  <a class="nav-link text-white" href="#ask">Hỏi đáp</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a
@@ -78,14 +72,10 @@
                     aria-labelledby="navbarDropdownMenuLink"
                   >
                     <li>
-                      <a class="dropdown-item" href="#login"
-                        >Đăng nhập</a
-                      >
+                      <a class="dropdown-item" href="#login">Đăng nhập</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#signup"
-                        >Đăng ký</a
-                      >
+                      <a class="dropdown-item" href="#signup">Đăng ký</a>
                     </li>
                     <li>
                       <button
@@ -99,9 +89,7 @@
 
                     <hr />
                     <li>
-                      <a class="dropdown-item" href="#edit"
-                        >Sửa tài khoản</a
-                      >
+                      <a class="dropdown-item" href="#edit">Sửa tài khoản</a>
                     </li>
                   </ul>
                 </li>
@@ -111,7 +99,7 @@
         </nav>
       </div>
       <!-- View -->
-      <div ng-view></div>
+      <main ng-view></main>
       <!-- Footer -->
       <footer class="mt-5">
         <div class="row pt-5 px-5 pb-2 text-left text-white bg-dark">
@@ -256,6 +244,24 @@
           </p>
         </div>
       </footer>
+      <!-- Back to top -->
+      <div>
+        <button class="backTop" onclick="topFunction()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            class="bi bi-arrow-up-circle text-white"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
 
     <script src="js/jquery.min.js"></script>
@@ -263,6 +269,10 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/angularjs.min.js"></script>
     <script src="js/angular-route.js"></script>
-    <script src="./routes/routing.js"></script>
+    <script src="/routes/routing.js"></script>
+    <script src="main.js"></script>
+    <script src="./pages/home.js"></script>
+    <script src="./pages/test.js"></script>
+    <script src="./databases/ADAV.js"></script>
   </body>
 </html>

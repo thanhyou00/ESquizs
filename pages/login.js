@@ -1,5 +1,5 @@
 // module
-const app = angular.module("myapp", []);
+var app = angular.module("myapp", []);
 
 app.controller("myctrl", ($scope) => {
   $scope.students = [

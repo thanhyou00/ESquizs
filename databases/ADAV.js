@@ -34,9 +34,7 @@ if (toastTrigger) {
 
 // QUIZZ
 
-const app = angular.module("myapp", []);
-
-app.controller("myctrl", ($scope) => {
+app.controller("ctrlADAV", function ($scope) {
   $scope.adav = [
     {
       Id: 25106,

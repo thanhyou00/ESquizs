@@ -1,6 +1,5 @@
-const app = angular.module("myapp", []);
 
-app.controller("myctrl", ($scope) => {
+app.controller("ctrlTest", function ($scope) {
   $scope.course = [
     {
       Id: "ADAV",
