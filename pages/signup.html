@@ -2,24 +2,18 @@
   <body ng-app="myapp" ng-controller="myctrl">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-5 pt-5">
+            <div class="col-12 col-sm-7 pt-5">
                 <h2 class="pt-5">ESQUIZ</h2>
                 <form action="" name="formUser">
                     <h2>Đăng ký</h2>
-                    <div class="mb-3">
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Tên đăng nhập</label>
                         <input type="text" class="form-control" id="exampleFormControlInput1" required
                         oninvalid="this.setCustomValidity('Vui lòng nhập tên đăng nhập')"
                         onchange="this.setCustomValidity('')"
                         name="username"
-                        >
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required
-                        oninvalid="this.setCustomValidity('Vui lòng nhập email')"
-                        onchange="this.setCustomValidity('')"
-                        name="email"
                         >
                       </div>
                       <div class="mb-3">
@@ -38,18 +32,51 @@
                         name="repass"
                         >
                       </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required
+                        oninvalid="this.setCustomValidity('Vui lòng nhập email')"
+                        onchange="this.setCustomValidity('')"
+                        name="email"
+                        >
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Giới tính</label>
+                        <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required
+                        oninvalid="this.setCustomValidity('Vui lòng giới tính')"
+                        onchange="this.setCustomValidity('')"
+                        name=""
+                        > -->
+                        <select name="" id="exampleInputEmail1" class="form-control">
+                          <option value="">Nam</option>
+                          <option value="">Nữ</option>
+                          <option value="">Khác</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Ngày sinh</label>
+                        <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required
+                        oninvalid="this.setCustomValidity('Ngày sinh không đúng')"
+                        onchange="this.setCustomValidity('')"
+                        name=""
+                        >
+                      </div>
+                    </div>
+                  </div>
                       <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
                             <label class="form-check-label" for="flexCheckChecked">
                               Đồng ý điều khoản
                             </label>
-                            <span class="text-right"><a href="login.html">Đăng nhập ngay ?</a></span>
+                            <span class="text-right"><a href="#login">Đăng nhập ngay ?</a></span>
                       </div>
                       <br>
                       <button type="submit" class="btn btn-primary">Đăng ký</button>
                 </form>
             </div>
-            <div class="col-12 col-sm-7 p-3" style="display: flex;justify-content: center;align-items: center;">
+            <div class="col-12 col-sm-5 p-3" style="display: flex;justify-content: center;align-items: center;">
                 <img src="../img/undraw_mobile_login_re_9ntv.svg" class="img-fluid" alt="">
             </div>
         </div>

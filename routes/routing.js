@@ -39,11 +39,11 @@ app.config(function ($routeProvider, $locationProvider) {
     })
     .when("/signup", {
       templateUrl: "/pages/signup.html",
-      controller:"ctrlSigup"
+      controller:"ctrlLoginAndSignup"
     })
     .when("/login", {
       templateUrl: "/pages/login.html",
-      controller:"ctrlLogin"
+      controller:"ctrlLoginAndSignup"
     })
     // test
     .when("/ADAV", {

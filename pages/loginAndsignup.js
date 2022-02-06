@@ -1,6 +1,6 @@
 // module
 
-app.controller("ctrlLogin", function ($scope) {
+app.controller("ctrlLoginAndSignup", function ($scope) {
   $scope.students = [
     {
       id: 1234,
@@ -10,8 +10,8 @@ app.controller("ctrlLogin", function ($scope) {
       email: "teonv@fpt.edu.vn",
       gender: "true",
       birthday: "1995-12-21",
-      schoolfee: "1500000",
-      marks: "0",
+      // schoolfee: "1500000",
+      marks: 0,
     },
     {
       id: 2345,
@@ -21,8 +21,8 @@ app.controller("ctrlLogin", function ($scope) {
       email: "pheonv@fpt.edu.vn",
       gender: "true",
       birthday: "1985-10-11",
-      schoolfee: "2500000",
-      marks: "0",
+      // schoolfee: "2500000",
+      marks: 0,
     },
     {
       id: 3456,
@@ -32,11 +32,15 @@ app.controller("ctrlLogin", function ($scope) {
       email: "nopt@fpt.edu.vn",
       gender: "false",
       birthday: "1993-05-15",
-      schoolfee: "2000000",
-      marks: "0",
+      // schoolfee: "2000000",
+      marks: 0,
     },
   ];
 
+  // handler save to local storage
+
+  const infoAccount = JSON.stringify($scope.students)
+  localStorage.setItem('account', infoAccount)
   // handler login
   $scope.fullname = "Người mới chơi";
   $scope.submit = (user, pass) => {
