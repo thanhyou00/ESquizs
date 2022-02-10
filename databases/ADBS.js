@@ -1,4 +1,3 @@
-
 // sucess
 var toastTrigger = document.getElementById("liveToastBtn");
 var toastLiveExample = document.getElementById("liveToast");
@@ -13,7 +12,7 @@ if (toastTrigger) {
 // QUIZZ
 
 app.controller("ctrlADBS", function ($scope) {
-  $scope.adbs = [
+  $scope.src = [
     {
       Id: 25026,
       Text: "Điều khiển được sử dụng để hiển thị nội dụng trang web trong ứng dụng Android?",

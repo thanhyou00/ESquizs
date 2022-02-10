@@ -14,7 +14,7 @@ if (toastTrigger) {
 // QUIZZ
 
 app.controller("ctrlADAV", function ($scope) {
-  $scope.adav = [
+  $scope.src = [
     {
       Id: 25106,
       Text: "Có mấy loại Service?",

@@ -6,23 +6,25 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="../../index.html">Trang chủ</a>
+            <a href="#home">Trang chủ</a>
           </li>
           <li class="breadcrumb-item">
-            <a href="test.html">Thi trắc nghiệm</a>
+            <a href="#test">Thi trắc nghiệm</a>
           </li>
           <li class="breadcrumb-item active" aria-current="page">
-            Android cơ bản
+            Android nâng cao
           </li>
         </ol>
       </nav>
     </div>
-    <div class="row mt-4" ng-repeat="ad in adbs">
+    <div class="row mt-4" ng-repeat="ad in src">
       <div class="card">
         <div class="card-header row text-white bg-success" style="width: 100%">
           <h5 class="col-11">[{{ad.Id}}] {{ad.Text}}</h5>
           <div class="col-1">
-            <span class="badge bg-primary">{{ad.Marks}} điểm</span>
+            <span class="badge bg-primary">
+              {{ad.Marks}} điểm
+            </span>
           </div>
         </div>
         <div class="card-body" ng-repeat="as in ad.Answers">
@@ -31,11 +33,11 @@
               class="form-check-input"
               type="radio"
               name="{{ad.Id}}"
-              id="flexRadioDefault1"
+              ng-model="result"
             />
-            <label class="form-check-label" for="f{{ad.Id}}">
+            <label class="form-check-label" for="{{ad.Id}}">
               {{as.Text}}
-            </label>
+            </label> 
           </div>
         </div>
       </div>

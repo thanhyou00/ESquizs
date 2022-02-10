@@ -44,12 +44,16 @@ app.config(function ($routeProvider, $locationProvider) {
     })
     // test
     .when("/ADAV", {
-      templateUrl: "/pages/tests/ADAV.html",
+      templateUrl: "/pages/tests/root.html",
       controller: "ctrlADAV",
     })
     .when("/ADBS", {
-      templateUrl: "/pages/tests/ADBS.html",
+      templateUrl: "/pages/tests/root.html",
       controller: "ctrlADBS",
+    })
+    .when("/ADTE", {
+      templateUrl: "/pages/tests/root.html",
+      controller: "ctrlADTE",
     })
     .otherwise({
       redirectTo: "/home",
