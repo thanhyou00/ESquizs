@@ -1,6 +1,6 @@
-// module
 
-app.controller("ctrlLoginAndSignup", function ($scope) {
+// module
+app.controller("ctrlLogin", function ($scope) {
   $scope.students = [
     {
       id: 1234,
@@ -9,7 +9,7 @@ app.controller("ctrlLoginAndSignup", function ($scope) {
       fullname: "Nguyễn Văn Tèo",
       email: "teonv@fpt.edu.vn",
       gender: "true",
-      birthday: "1995-12-21",
+      birthday: "21/12/1995",
       // schoolfee: "1500000",
       marks: 0,
     },
@@ -20,7 +20,7 @@ app.controller("ctrlLoginAndSignup", function ($scope) {
       fullname: "Nguyễn Văn Chí Phèo",
       email: "pheonv@fpt.edu.vn",
       gender: "true",
-      birthday: "1985-10-11",
+      birthday: "11/10/1985",
       // schoolfee: "2500000",
       marks: 0,
     },
@@ -31,7 +31,7 @@ app.controller("ctrlLoginAndSignup", function ($scope) {
       fullname: "Phạm Thị Nở",
       email: "nopt@fpt.edu.vn",
       gender: "false",
-      birthday: "1993-05-15",
+      birthday: "15/05/1993",
       // schoolfee: "2000000",
       marks: 0,
     },
@@ -39,8 +39,8 @@ app.controller("ctrlLoginAndSignup", function ($scope) {
 
   // handler save to local storage
 
-  const infoAccount = JSON.stringify($scope.students)
-  localStorage.setItem('account', infoAccount)
+  const infoAccount = JSON.stringify($scope.students);
+  localStorage.setItem("account", infoAccount);
   // handler login
   $scope.fullname = "Người mới chơi";
   $scope.submit = (user, pass) => {
@@ -85,4 +85,8 @@ app.controller("ctrlLoginAndSignup", function ($scope) {
         )
       : alert("Nhập sai mã xác nhận");
   };
+
+  // Handler Signup
+  // Add new a account
+  
 });
