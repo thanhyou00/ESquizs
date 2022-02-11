@@ -1,8 +1,7 @@
-
-
 // QUIZZ
 
 app.controller("ctrlASNE", function ($scope) {
+  $scope.title = "Lập trình ASP.NET";
   $scope.src = [
     {
       Id: 25970,

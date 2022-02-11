@@ -1,7 +1,7 @@
-
 // QUIZZ
 
 app.controller("ctrlGAME", function ($scope) {
+  $scope.title = "Lập trình game 2D";
   $scope.src = [
     {
       Id: 25420,

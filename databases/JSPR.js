@@ -1,4 +1,5 @@
 app.controller("ctrlJSPR", function ($scope) {
+  $scope.title = "Lập trình JavaScript";
   $scope.src = [
     {
       Id: 25740,

@@ -1,4 +1,5 @@
 app.controller("ctrlJABS", function ($scope) {
+  $scope.title = "Lập trình hướng đối tượng với Java";
   $scope.src = [
     {
       Id: 26050,

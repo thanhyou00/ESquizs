@@ -1,5 +1,5 @@
-
 app.controller("ctrlHTCS", function ($scope) {
+  $scope.title = "HTML5 và CSS3";
   $scope.src = [
     {
       Id: 25820,
@@ -216,14 +216,23 @@ app.controller("ctrlHTCS", function ($scope) {
       Marks: 1,
       AnswerId: 106918,
       Answers: [
-        { Id: 106917, Text: '\u003cinput font="datetime" name="bdaytime"\u003e' },
-        { Id: 106918, Text: '\u003cinput type="datetime" name="bdaytime"\u003e' },
+        {
+          Id: 106917,
+          Text: '\u003cinput font="datetime" name="bdaytime"\u003e',
+        },
+        {
+          Id: 106918,
+          Text: '\u003cinput type="datetime" name="bdaytime"\u003e',
+        },
         {
           Id: 106919,
           Text: '\u003cinput style="datetime" name="bdaytime"\u003e',
         },
         { Id: 106920, Text: '\u003cinput id="datetime" name="bdaytime"\u003e' },
-        { Id: 106921, Text: '\u003cinput for="datetime" name="bdaytime"\u003e' },
+        {
+          Id: 106921,
+          Text: '\u003cinput for="datetime" name="bdaytime"\u003e',
+        },
         {
           Id: 106922,
           Text: '\u003cinput format="datetime" name="bdaytime"\u003e',
@@ -308,7 +317,10 @@ app.controller("ctrlHTCS", function ($scope) {
           Id: 106950,
           Text: '\u003clabel font="arial"\u003eMale\u003c/label\u003e',
         },
-        { Id: 106951, Text: '\u003clabel id="male"\u003eMale\u003c/label\u003e' },
+        {
+          Id: 106951,
+          Text: '\u003clabel id="male"\u003eMale\u003c/label\u003e',
+        },
         {
           Id: 106952,
           Text: '\u003clabel color="red"\u003eMale\u003c/label\u003e',
@@ -336,10 +348,16 @@ app.controller("ctrlHTCS", function ($scope) {
       AnswerId: 106963,
       Answers: [
         { Id: 106959, Text: "\u003ccharset\u003eunicode\u003c/charset\u003e" },
-        { Id: 106960, Text: '\u003cmeta\u003echarset="utf-8"\u003c/meta\u003e' },
+        {
+          Id: 106960,
+          Text: '\u003cmeta\u003echarset="utf-8"\u003c/meta\u003e',
+        },
         { Id: 106961, Text: "\u003ccharset\u003eutf-8\u003c/charset\u003e" },
         { Id: 106962, Text: '\u003cmeta style="utf-8"\u003e\u003c/meta\u003e' },
-        { Id: 106963, Text: '\u003cmeta charset="utf-8"\u003e\u003c/meta\u003e' },
+        {
+          Id: 106963,
+          Text: '\u003cmeta charset="utf-8"\u003e\u003c/meta\u003e',
+        },
         {
           Id: 106964,
           Text: '\u003cmeta\u003echarset="unicode"\u003c/meta\u003e',
@@ -454,7 +472,10 @@ app.controller("ctrlHTCS", function ($scope) {
         { Id: 107008, Text: "Thực thi sự kiện show khi nhả nút" },
         { Id: 107009, Text: "Thực thi sự kiện show khi đóng trình duyệt" },
         { Id: 107010, Text: "Thực thi sự kiện show khi nhấn nút" },
-        { Id: 107011, Text: "Thực thi sự kiện show khi nhấn đúp chuột vào nút" },
+        {
+          Id: 107011,
+          Text: "Thực thi sự kiện show khi nhấn đúp chuột vào nút",
+        },
         { Id: 107012, Text: "Gọi sự kiện show khi thực hiện di chuột qua nút" },
       ],
     },
@@ -1099,5 +1120,4 @@ app.controller("ctrlHTCS", function ($scope) {
       ],
     },
   ];
-  
-})
+});

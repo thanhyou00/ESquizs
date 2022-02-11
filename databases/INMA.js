@@ -1,4 +1,5 @@
 app.controller("ctrlINMA", function ($scope) {
+  $scope.title = "Internet Marketing";
   $scope.src = [
     {
       Id: 24711,

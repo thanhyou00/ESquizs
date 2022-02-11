@@ -1,4 +1,5 @@
 app.controller("ctrlPHPP", function ($scope) {
+  $scope.title = "Lập trình PHP";
   $scope.src = [
     {
       Id: 25890,

@@ -1,4 +1,5 @@
 app.controller("ctrlJAAV", function ($scope) {
+  $scope.title = "Lập trình Java nâng cao";
   $scope.src = [
     {
       Id: 26120,

@@ -1,8 +1,7 @@
-
-
 // QUIZZ
 
 app.controller("ctrlCLCO", function ($scope) {
+  $scope.title = "Điện toán đám mây";
   $scope.src = [
     {
       Id: 24661,

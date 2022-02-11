@@ -1,4 +1,5 @@
 app.controller("ctrlLAYO", function ($scope) {
+  $scope.title = "Thiết kế layout";
   $scope.src = [
     {
       Id: 25660,

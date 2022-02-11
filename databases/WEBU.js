@@ -1,4 +1,5 @@
 app.controller("ctrlWEBU", function ($scope) {
+  $scope.title = "Xây dựng trang web";
   $scope.src = [
     {
       Id: 25580,

@@ -1,7 +1,7 @@
-
 // QUIZZ
 
 app.controller("ctrlDBAV", function ($scope) {
+  $scope.title = "SQL Server";
   $scope.src = [
     {
       Id: 24956,

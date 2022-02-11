@@ -4,6 +4,7 @@
 // QUIZZ
 
 app.controller("ctrlADAV", function ($scope) {
+  $scope.title = "Lập trình Android nâng cao";
   $scope.src = [
     {
       Id: 25106,

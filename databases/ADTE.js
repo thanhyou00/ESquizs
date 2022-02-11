@@ -1,8 +1,7 @@
-
-
 // QUIZZ
 
 app.controller("ctrlADTE", function ($scope) {
+  $scope.title = "Kiểm thử và triển khai ứng dụng Android";
   $scope.src = [
     {
       Id: 25262,

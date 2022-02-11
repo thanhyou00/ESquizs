@@ -1,4 +1,5 @@
 app.controller("ctrlVBPR", function ($scope) {
+  $scope.title = "Lập trình VB.NET";
   $scope.src = [
     {
       Id: 24836,

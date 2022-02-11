@@ -1,4 +1,5 @@
 app.controller("ctrlPMAG", function ($scope) {
+  $scope.title = "Quản lý dự án với Agile";
   $scope.src = [
     {
       Id: 24791,

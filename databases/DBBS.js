@@ -1,8 +1,7 @@
-
-
 // QUIZZ
 
 app.controller("ctrlDBBS", function ($scope) {
+  $scope.title = "Cơ sở dữ liệu";
   $scope.src = [
     {
       Id: 24916,

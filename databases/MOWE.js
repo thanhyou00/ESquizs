@@ -1,4 +1,5 @@
 app.controller("ctrlMOWE", function ($scope) {
+  $scope.title = "Thiết kế web cho điện thoại di động";
   $scope.src = [
     {
       Id: 25342,

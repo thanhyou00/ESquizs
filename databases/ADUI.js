@@ -1,8 +1,7 @@
-
-
 // QUIZZ
 
 app.controller("ctrlADUI", function ($scope) {
+  $scope.title = "Thiết kế giao diện trên Android";
   $scope.src = [
     {
       Id: 25183,
