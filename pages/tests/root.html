@@ -36,7 +36,7 @@
               ng-model="result"
             />
             <label class="form-check-label" for="{{ad.Id}}">
-              {{as.Text}}
+              {{as.Text}} 
             </label> 
           </div>
         </div>
@@ -70,49 +70,31 @@
     </div>
     <!-- Submit -->
     <div class="row mt-5">
-      <a
-        type="button"
-        class="btn btn-primary"
-        id="liveToastBtn"
-        aria-expanded="false"
-        aria-controls="multiCollapseExample1"
-        data-bs-toggle="collapse"
-        href="#multiCollapseExample1"
-        >Kiểm tra kết quả</a
-      >
-      <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-        <div
-          id="liveToast"
-          class="toast"
-          role="alert"
-          aria-live="assertive"
-          aria-atomic="true"
-        >
-          <div
-            class="alert alert-success d-flex align-items-center"
-            role="alert"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="currentColor"
-              class="bi bi-check2-all"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0l7-7zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0z"
-              />
-              <path
-                d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708z"
-              />
-            </svg>
-            <div>
-              Aww yeah, you successfully read this important alert message
+      <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="exampleModalToggleLabel">Kết quả bài làm</h3>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <h5>Số câu đúng : 30/50</h5>
+                    <h5>Tổng điểm đạt được : 30 điểm</h5>
+                    <h5>Thời gian hoàn thành : 5 phút 50 giây</h5>
+                </div>
+                <hr />
+                <div class="row">
+                  <img class="rounded mx-auto d-block" src="/img/undraw_well_done_i2wr.svg" alt="well-done" style="width: 40%; height: 40%;">
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Đóng</button>
             </div>
           </div>
         </div>
       </div>
+      <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Kiểm tra kết quả</a>
     </div>
     <!-- Pagination -->
     <div class="row mt-5">

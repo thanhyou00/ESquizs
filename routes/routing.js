@@ -36,11 +36,11 @@ app.config(function ($routeProvider, $locationProvider) {
     })
     .when("/signup", {
       templateUrl: "/pages/signup.html",
-      controller:"ctrlSignup"
+      controller: "ctrlSignup",
     })
     .when("/login", {
       templateUrl: "/pages/login.html",
-      controller:"ctrlLogin"
+      controller: "ctrlLogin",
     })
     // test
     .when("/ADAV", {
@@ -54,6 +54,74 @@ app.config(function ($routeProvider, $locationProvider) {
     .when("/ADTE", {
       templateUrl: "/pages/tests/root.html",
       controller: "ctrlADTE",
+    })
+    .when("/ADUI", {
+      templateUrl: "/pages/tests/root.html",
+      controller: "ctrlADUI",
+    })
+    .when("/ASNE", {
+      templateUrl: "/pages/tests/root.html",
+      controller: "ctrlASNE",
+    })
+    .when("/CLCO", {
+      templateUrl: "/pages/tests/root.html",
+      controller: "ctrlCLCO",
+    })
+    .when("/DBAV", {
+      templateUrl: "/pages/tests/root.html",
+      controller: "ctrlDBAV",
+    })
+    .when("/DBBS", {
+      templateUrl: "/pages/tests/root.html",
+      controller: "ctrlDBBS",
+    })
+    .when("/GAME", {
+      templateUrl: "/pages/tests/root.html",
+      controller: "ctrlGAME",
+    })
+    .when("/HTCS", {
+      templateUrl: "/pages/tests/root.html",
+      controller: "ctrlHTCS",
+    })
+    .when("/INMA", {
+      templateUrl: "/pages/tests/root.html",
+      controller: "ctrlINMA",
+    })
+    .when("/JAAV", {
+      templateUrl: "/pages/tests/root.html",
+      controller: "ctrlJAAV",
+    })
+    .when("/JABS", {
+      templateUrl: "/pages/tests/root.html",
+      controller: "ctrlJABS",
+    })
+    .when("/JSPR", {
+      templateUrl: "/pages/tests/root.html",
+      controller: "ctrlJSPR",
+    })
+    .when("/LAYO", {
+      templateUrl: "/pages/tests/root.html",
+      controller: "ctrlLAYO",
+    })
+    .when("/MOWE", {
+      templateUrl: "/pages/tests/root.html",
+      controller: "ctrlMOWE",
+    })
+    .when("/PHPP", {
+      templateUrl: "/pages/tests/root.html",
+      controller: "ctrlPHPP",
+    })
+    .when("/PMAG", {
+      templateUrl: "/pages/tests/root.html",
+      controller: "ctrlPMAG",
+    })
+    .when("/VBPR", {
+      templateUrl: "/pages/tests/root.html",
+      controller: "ctrlVBPR",
+    })
+    .when("/WEBU", {
+      templateUrl: "/pages/tests/root.html",
+      controller: "ctrlWEBU",
     })
     .otherwise({
       redirectTo: "/home",

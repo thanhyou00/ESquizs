@@ -1,15 +1,5 @@
-// back to top
 
-// sucess
-var toastTrigger = document.getElementById("liveToastBtn");
-var toastLiveExample = document.getElementById("liveToast");
-if (toastTrigger) {
-  toastTrigger.addEventListener("click", function () {
-    var toast = new bootstrap.Toast(toastLiveExample);
 
-    toast.show();
-  });
-}
 
 // QUIZZ
 
@@ -1048,4 +1038,12 @@ app.controller("ctrlADAV", function ($scope) {
       ],
     },
   ];
+  $scope.result;
+  $scope.check = function () {
+    for(var i=0;i <src.length();i++) {
+      // if(src[i].AnswerId==104121) {
+        alert("oke xong")
+      // }
+    }
+  }
 });
