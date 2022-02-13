@@ -1,217 +1,118 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ESquiz | Góp ý</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="feedback.css" />
-    <link rel="shortcut icon" href="../img/avt.svg" type="image/x-icon" />
-  </head>
-  <body>
-    <div class="container-fluid">
-      <!-- SDK -->
-      <div id="fb-root"></div>
-      <script
-        async
-        defer
-        crossorigin="anonymous"
-        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0"
-        nonce="znwdDVmL"
-      ></script>
-      <!-- Change pass -->
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Đổi mật khẩu</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <form action="" class="">
-                <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label"
-                    >Tên đăng nhập</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleFormControlInput1"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label"
-                    >Mật khẩu cũ</label
-                  >
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="exampleFormControlInput1"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label"
-                    >Mật khẩu mới</label
-                  >
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="exampleFormControlInput1"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label"
-                    >Mã xác nhận</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="exampleFormControlInput1"
-                  />
-                </div>
-                <br />
-                <button type="submit" class="btn btn-primary">Xác nhận</button>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Đóng
-              </button>
-              <button type="button" class="btn btn-primary">
-                Lưu thay đổi
-              </button>
-            </div>
-          </div>
+<br />
+<div class="container-fluid">
+  <!-- SDK -->
+  <div id="fb-root"></div>
+  <script
+    async
+    defer
+    crossorigin="anonymous"
+    src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0"
+    nonce="znwdDVmL"
+  ></script>
+  <!-- Feedback -->
+  <div class="container mt-5">
+    <div class="row mb-5">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="../index.html">Trang chủ</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Góp ý</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="row">
+      <div class="card">
+        <div class="card-header">
+          <h4>Để lại ý kiến đóng góp của bạn để chúng tôi nỗ lực hơn</h4>
         </div>
-      </div>
-      <!-- Feedback -->
-      <div class="container mt-5">
-        <div class="row mb-5">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="../index.html">Trang chủ</a>
-              </li>
-              <li class="breadcrumb-item active" aria-current="page">Góp ý</li>
-            </ol>
-          </nav>
-        </div>
-        <div class="row">
-          <div class="card">
-            <div class="card-header">
-              <h4>Để lại ý kiến đóng góp của bạn để chúng tôi nỗ lực hơn</h4>
-            </div>
-            <div class="card-body">
+        <div class="card-body">
+          <div class="row">
+            <form>
               <div class="row">
-                <form>
-                  <div class="row">
-                    <div class="col-12 col-md-6">
-                      <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label"
-                          >Họ và tên</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="exampleInputEmail1"
-                          aria-describedby="emailHelp"
-                        />
-                      </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                      <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label"
-                          >Số điện thoại</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="exampleInputPassword1"
-                        />
-                      </div>
-                    </div>
+                <div class="col-12 col-md-6">
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"
+                      >Họ và tên</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                    />
                   </div>
-                  <div class="row">
-                    <div class="col-12 col-md-6">
-                      <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label"
-                          >Email</label
-                        >
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="exampleInputEmail1"
-                          aria-describedby="emailHelp"
-                        />
-                        <div id="emailHelp" class="form-text">
-                          We'll never share your email with anyone else.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                      <div class="mb-3">
-                        <label for="disabledSelect" class="form-label"
-                          >Nội dung phản hồi</label
-                        >
-                        <select id="disabledSelect" class="form-select">
-                          <option>Đánh giá</option>
-                          <option>Về chất lượng</option>
-                          <option>Góp ý</option>
-                        </select>
-                      </div>
-                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label"
+                      >Số điện thoại</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleInputPassword1"
+                    />
                   </div>
-                  <div class="row">
-                    <div class="mb-3">
-                      <label
-                        for="exampleFormControlTextarea1"
-                        class="form-label"
-                        >Nội dung góp ý</label
-                      >
-                      <textarea
-                        class="form-control"
-                        id="exampleFormControlTextarea1"
-                        rows="5"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary">
-                    Đóng góp ý kiến
-                  </button>
-                </form>
+                </div>
               </div>
-            </div>
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                    />
+                    <div id="emailHelp" class="form-text">
+                      We'll never share your email with anyone else.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="mb-3">
+                    <label for="disabledSelect" class="form-label"
+                      >Nội dung phản hồi</label
+                    >
+                    <select id="disabledSelect" class="form-select">
+                      <option>Đánh giá</option>
+                      <option>Về chất lượng</option>
+                      <option>Góp ý</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label"
+                    >Nội dung góp ý</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="5"
+                  ></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Đóng góp ý kiến
+              </button>
+            </form>
           </div>
-        </div>
-        <div class="row mt-4">
-          <div
-            class="fb-comments"
-            data-href="https://thanhyou00.github.io/esquizs/pages/feedback.html"
-            data-width="100%"
-            data-numposts="5"
-          ></div>
         </div>
       </div>
     </div>
-
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-  </body>
-</html>
+    <div class="row mt-4">
+      <div
+        class="fb-comments"
+        data-href="https://thanhyou00.github.io/esquizs/pages/feedback.html"
+        data-width="100%"
+        data-numposts="5"
+      ></div>
+    </div>
+  </div>
+</div>
