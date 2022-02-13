@@ -8,8 +8,8 @@ app.config(function ($routeProvider, $locationProvider) {
   $routeProvider
     // menu
     .when("/", {
-      templateUrl: "/pages/home.html",
-      controller: "ctrlHome",
+      templateUrl: "/pages/login.html",
+      controller: "ctrlLogin",
     })
     .when("/home", {
       templateUrl: "/pages/home.html",
@@ -36,7 +36,7 @@ app.config(function ($routeProvider, $locationProvider) {
     })
     .when("/signup", {
       templateUrl: "/pages/signup.html",
-      controller: "ctrlSignup",
+      controller: "ctrlLogin",
     })
     .when("/login", {
       templateUrl: "/pages/login.html",
@@ -124,6 +124,6 @@ app.config(function ($routeProvider, $locationProvider) {
       controller: "ctrlWEBU",
     })
     .otherwise({
-      redirectTo: "/home",
+      redirectTo: "/login",
     });
 });

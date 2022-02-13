@@ -42,14 +42,16 @@ app.controller("ctrlLogin", function ($scope) {
   const infoAccount = JSON.stringify($scope.students);
   localStorage.setItem("account", infoAccount);
   // handler login
-  $scope.fullname = "Người mới chơi";
-  $scope.submit = (user, pass) => {
+  $scope.user;
+  $scope.pass;
+  let len = $scope.students.length;
+  $scope.submit = () => {
     $scope.flag = 0;
-    for (var i = 0; i < $scope.students.length; i++) {
+    for (var i = 0; i < len; i++) {
       // Validate
       if (
-        user === $scope.students[i].username &&
-        pass === $scope.students[i].password
+        $scope.user === $scope.students[i].username &&
+        $scope.pass === $scope.students[i].password
       ) {
         // flag
         $scope.flag++;
@@ -58,8 +60,8 @@ app.controller("ctrlLogin", function ($scope) {
       }
     }
 
-    if (user.length >= 1 && $scope.flag == 1) {
-      alert("Đăng nhập thành công !");
+    if ($scope.user.length >= 1 && $scope.flag == 1) {
+      alert("Đăng nhập thành công ! "+ $scope.fullname);
     } else {
       alert("Sai tên đăng nhập hoặc mật khẩu !");
     }
