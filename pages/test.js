@@ -1,6 +1,5 @@
-
 app.controller("ctrlTest", function ($scope) {
-  $scope.course = [
+  $scope.course1 = [
     {
       Id: "ADAV",
       Name: "Lập trình Android nâng cao",
@@ -21,6 +20,9 @@ app.controller("ctrlTest", function ($scope) {
       Name: "Thiết kế giao diện trên Android",
       Logo: "ADUI.svg",
     },
+  ];
+
+  $scope.course2 = [
     {
       Id: "ASNE",
       Name: "Lập trình ASP.NET",
@@ -41,6 +43,9 @@ app.controller("ctrlTest", function ($scope) {
       Name: "Cơ sở dữ liệu",
       Logo: "DBBS.svg",
     },
+  ];
+
+  $scope.course3 = [
     {
       Id: "GAME",
       Name: "Lập trình game 2D",
@@ -61,6 +66,8 @@ app.controller("ctrlTest", function ($scope) {
       Name: "Lập trình Java nâng cao",
       Logo: "JAAV.svg",
     },
+  ];
+  $scope.course4 = [
     {
       Id: "JABS",
       Name: "Lập trình hướng đối tượng với Java",
@@ -81,6 +88,9 @@ app.controller("ctrlTest", function ($scope) {
       Name: "Thiết kế web cho điện thoại di động",
       Logo: "MOWE.svg",
     },
+  ];
+
+  $scope.course5 = [
     {
       Id: "PHPP",
       Name: "Lập trình PHP",
