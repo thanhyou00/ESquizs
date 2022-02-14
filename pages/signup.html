@@ -5,7 +5,8 @@
       <form action="" name="formUser">
         <h2>Đăng ký</h2>
         <div class="row">
-          <div class="col-6 col-sm-12">
+          <!-- input -->
+          <div class="col-12 col-sm-6 ">
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label"
                 >Tên đăng nhập</label
@@ -20,6 +21,9 @@
                 name="username"
                 ng-model="username"
               />
+              <div class="text-danger" ng-hide="formUser.username.$untouched || formUser.username.$valid">
+                <small ng-show="formUser.username.$error.required"> Không được để trống </small>
+              </div>
             </div>
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label"
@@ -32,9 +36,12 @@
                 required
                 oninvalid="this.setCustomValidity('Vui lòng nhập mật khẩu')"
                 onchange="this.setCustomValidity('')"
-                name="pass"
+                name="password"
                 ng-model="password"
               />
+              <div class="text-danger" ng-hide="formUser.password.$untouched || formUser.password.$valid">
+                <small ng-show="formUser.password.$error.required"> Không được để trống </small>
+              </div>
             </div>
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label"
@@ -47,12 +54,15 @@
                 required
                 oninvalid="this.setCustomValidity('Vui lòng nhập mật khẩu xác nhận')"
                 onchange="this.setCustomValidity('')"
-                name="repass"
+                name="repassword"
                 ng-model="repassword"
               />
+              <div class="text-danger" ng-hide="formUser.repassword.$untouched || formUser.repassword.$valid">
+                <small ng-show="formUser.repassword.$error.required"> Không được để trống </small>
+              </div>
             </div>
           </div>
-          <div class="col-6 col-sm-12">
+          <div class="col-12 col-sm-6 ">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email</label>
               <input
@@ -66,12 +76,18 @@
                 name="email"
                 ng-model="email"
               />
+              <div class="text-danger" ng-hide="formUser.email.$untouched || formUser.email.$valid">
+                <small ng-show="formUser.email.$error.required"> Không được để trống </small>
+                <small ng-show="formUser.email.$error.email"
+                  >Không đúng định dạng email</small
+                >
+              </div>
             </div>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label"
                 >Giới tính</label
               >
-              <select name="" class="form-control" ng-model="gender">
+              <select name="" class="form-select" ng-model="gender">
                 <option value="male">Nam</option>
                 <option value="female">Nữ</option>
                 <option value="unde">Khác</option>
@@ -92,9 +108,16 @@
                 name="date"
                 ng-model="date"
               />
+              <div class="text-danger" ng-hide="formUser.date.$untouched || formUser.date.$valid">
+                <small ng-show="formUser.date.$error.required"> Không được để trống </small>
+                <small ng-show="formUser.date.$error.date"
+                  >Không đúng định dạng date</small
+                >
+              </div>
             </div>
           </div>
         </div>
+          <!-- check  -->
         <div class="form-check">
           <input
             class="form-check-input"

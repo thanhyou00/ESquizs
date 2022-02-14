@@ -1,4 +1,22 @@
+      // check pass
+      //   camelCase
+      app.directive("checkPassword", function(){
+        return {
+            require : 'ngModel',
+            link : function (scope, element, attr, controller) {
+                const fnValidate = function (value) {
+                    if(value.length>=8) {
+                        controller.$setValidity("check_password", true);
+                    } else {
+                        controller.$setValidity("check_password", false);
+                    }
 
+                    return value;
+                }
+                controller.$parsers.push(fnValidate);
+            }
+        }
+    });
 // module
 app.controller("ctrlLogin", function ($scope) {
   $scope.students = [
@@ -60,12 +78,13 @@ app.controller("ctrlLogin", function ($scope) {
       }
     }
 
-    if ($scope.user.length >= 1 && $scope.flag == 1) {
+    if ($scope.flag == 1) {
       alert("Đăng nhập thành công ! "+ $scope.fullname);
     } else {
       alert("Sai tên đăng nhập hoặc mật khẩu !");
     }
   };
+
 
   // get pass
   $scope.getindex = 0;
@@ -92,3 +111,4 @@ app.controller("ctrlLogin", function ($scope) {
   // Add new a account
   
 });
+

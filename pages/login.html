@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-12 col-sm-5 pt-5">
       <h2 class="pt-5">ESQUIZ</h2>
-      <form name="form_login" method="post">
+      <form name="formUser" method="post">
         <h2>Đăng nhập</h2>
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label"
@@ -18,6 +18,9 @@
             oninvalid="this.setCustomValidity('Vui lòng nhập tên đăng nhập')"
             onchange="this.setCustomValidity('')"
           />
+          <div class="text-danger" ng-hide="formUser.username.$untouched || formUser.username.$valid">
+            <small ng-show="formUser.username.$error.required"> Không được để trống </small>
+          </div>
         </div>
         <div class="mb-3">
           <label for="passwo" class="form-label">Mật khẩu</label>
@@ -26,11 +29,16 @@
             name="password"
             class="form-control"
             id="passwo"
+            check-password
             ng-model="pass"
             required
             oninvalid="this.setCustomValidity('Vui lòng nhập mật khẩu')"
             onchange="this.setCustomValidity('')"
           />
+         <div class="text-danger" ng-hide="formUser.password.$untouched || formUser.password.$valid">
+            <small ng-show="formUser.password.$error.required"> Không được để trống </small>
+            <small ng-show="formUser.password.$error.check_password"> Độ dài tối thiểu 6 kí tự </small>
+          </div>
         </div>
         <div class="form-check">
           <input
