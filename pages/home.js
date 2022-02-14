@@ -4,24 +4,24 @@
 app.controller("ctrlHome", function($scope) {
     $scope.course = [
       {
-        Id: "ADAV",
-        Name: "Lập trình Android nâng cao",
-        Logo: "ADAV.svg",
+        Id: "GAME",
+        Name: "Lập trình game 2D",
+        Logo: "GAME.svg",
       },
       {
         Id: "ADBS",
-        Name: "Lập trình Android cơ bản",
+        Name: "Android cơ bản",
         Logo: "ADBS.svg",
       },
       {
-        Id: "ADTE",
-        Name: "Kiểm thử và triển khai ứng dụng Android",
-        Logo: "ADTE.svg",
+      Id: "HTCS",
+      Name: "HTML5 và CSS3",
+      Logo: "HTCS.svg",
       },
       {
-        Id: "ADUI",
-        Name: "Thiết kế giao diện trên Android",
-        Logo: "ADUI.svg",
+        Id: "INMA",
+        Name: "Internet Marketing",
+        Logo: "INMA.svg",
       },
       {
         Id: "ASNE",
@@ -42,26 +42,6 @@ app.controller("ctrlHome", function($scope) {
         Id: "DBBS",
         Name: "Cơ sở dữ liệu",
         Logo: "DBBS.svg",
-      },
-      {
-        Id: "GAME",
-        Name: "Lập trình game 2D",
-        Logo: "GAME.svg",
-      },
-      {
-        Id: "HTCS",
-        Name: "HTML5 và CSS3",
-        Logo: "HTCS.svg",
-      },
-      {
-        Id: "INMA",
-        Name: "Internet Marketing",
-        Logo: "INMA.svg",
-      },
-      {
-        Id: "JAAV",
-        Name: "Lập trình Java nâng cao",
-        Logo: "JAAV.svg",
       },
     ];
   });
