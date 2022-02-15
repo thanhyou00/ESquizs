@@ -12,7 +12,7 @@
     </nav>
   </div>
 
-  <div class="tab-content" id="myTabContent">
+<div class="tab-content" id="myTabContent">
     <div
       class="tab-pane fade show active"
       id="page1"
@@ -40,12 +40,17 @@
                     longer.
                   </p>
                   <p class="card-text">
-                    <button type="button" class="btn btn-primary">
+                    <button type="button" class="btn btn-primary"
+                    data-bs-toggle="modal" 
+                    data-bs-target="#staticBackdrop"
+                    >
                       <a
                         href="#{{cr.Id}}"
                         class="text-white"
                         style="text-decoration: none"
-                        >Tham gia</a
+                        >
+                        Tham gia
+                        </a
                       >
                     </button>
                     <small class="text-muted">Last updated 3 mins ago</small>
