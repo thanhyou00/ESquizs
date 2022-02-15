@@ -22,13 +22,13 @@
       </nav>
     </div>
     <div class="row">
-      <div class="card">
-        <div class="card-header">
+      <div class="card bg-light">
+        <div class="card-header border-0 bg-light">
           <h4>Để lại ý kiến đóng góp của bạn để chúng tôi nỗ lực hơn</h4>
         </div>
         <div class="card-body">
           <div class="row">
-            <form>
+            <form name="frmFeedback">
               <div class="row">
                 <div class="col-12 col-md-6">
                   <div class="mb-3">
@@ -36,23 +36,38 @@
                       >Họ và tên</label
                     >
                     <input
-                      type="text"
-                      class="form-control"
-                      id="exampleInputEmail1"
-                      aria-describedby="emailHelp"
-                    />
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    name="username"
+                    ng-model="user"
+                    required
+                    oninvalid="this.setCustomValidity('Vui lòng nhập tên đăng nhập')"
+                    onchange="this.setCustomValidity('')"
+                  />
+                  <div class="text-danger" ng-hide="frmFeedback.username.$untouched || frmFeedback.username.$valid">
+                    <small ng-show="frmFeedback.username.$error.required"> Không được để trống </small>
+                  </div>
                   </div>
                 </div>
                 <div class="col-12 col-md-6">
                   <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label"
+                    <label for="exampleInputEmail1" class="form-label"
                       >Số điện thoại</label
                     >
                     <input
-                      type="text"
-                      class="form-control"
-                      id="exampleInputPassword1"
-                    />
+                    type="tel"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    name="numberphone"
+                    ng-model="numberphone"
+                    required
+                    oninvalid="this.setCustomValidity('Vui lòng nhập số điện thoại')"
+                    onchange="this.setCustomValidity('')"
+                  />
+                  <div class="text-danger" ng-hide="frmFeedback.numberphone.$untouched || frmFeedback.numberphone.$valid">
+                    <small ng-show="frmFeedback.numberphone.$error.required"> Không được để trống </small>
+                  </div>
                   </div>
                 </div>
               </div>
@@ -67,9 +82,17 @@
                       class="form-control"
                       id="exampleInputEmail1"
                       aria-describedby="emailHelp"
+                      required
+                      oninvalid="this.setCustomValidity('Vui lòng nhập email')"
+                      onchange="this.setCustomValidity('')"
+                      name="email"
+                      ng-model="email"
                     />
-                    <div id="emailHelp" class="form-text">
-                      We'll never share your email with anyone else.
+                    <div class="text-danger" ng-hide="frmFeedback.email.$untouched || frmFeedback.email.$valid">
+                      <small ng-show="frmFeedback.email.$error.required"> Không được để trống </small>
+                      <small ng-show="frmFeedback.email.$error.email"
+                        >Không đúng định dạng email</small
+                      >
                     </div>
                   </div>
                 </div>
@@ -95,7 +118,15 @@
                     class="form-control"
                     id="exampleFormControlTextarea1"
                     rows="5"
+                    required
+                    oninvalid="this.setCustomValidity('Vui lòng nhập nội dung')"
+                    onchange="this.setCustomValidity('')"
+                    name="content"
+                    ng-model="content"
                   ></textarea>
+                  <div class="text-danger" ng-hide="frmFeedback.content.$untouched || frmFeedback.content.$valid">
+                    <small ng-show="frmFeedback.content.$error.required"> Không được để trống </small>
+                  </div>
                 </div>
               </div>
               <button type="submit" class="btn btn-primary">
