@@ -1,90 +1,59 @@
-      // check pass
-      //   camelCase
-      app.directive("checkPassword", function(){
-        return {
-            require : 'ngModel',
-            link : function (scope, element, attr, controller) {
-                const fnValidate = function (value) {
-                    if(value.length>=8) {
-                        controller.$setValidity("check_password", true);
-                    } else {
-                        controller.$setValidity("check_password", false);
-                    }
-
-                    return value;
-                }
-                controller.$parsers.push(fnValidate);
-            }
+// check pass
+//   camelCase
+app.directive("checkPassword", function () {
+  return {
+    require: "ngModel",
+    link: function (scope, element, attr, controller) {
+      const fnValidate = function (value) {
+        if (value.length >= 8) {
+          controller.$setValidity("check_password", true);
+        } else {
+          controller.$setValidity("check_password", false);
         }
-    });
+
+        return value;
+      };
+      controller.$parsers.push(fnValidate);
+    },
+  };
+});
 // module
-app.controller("ctrlLogin", function ($scope) {
-  $scope.students = [
-    {
-      id: 1234,
-      username: "teonv",
-      password: "iloveyou",
-      fullname: "Nguyễn Văn Tèo",
-      email: "teonv@fpt.edu.vn",
-      gender: "true",
-      birthday: "21/12/1995",
-      // schoolfee: "1500000",
-      marks: 0,
-    },
-    {
-      id: 2345,
-      username: "pheonv",
-      password: "iloveyou",
-      fullname: "Nguyễn Văn Chí Phèo",
-      email: "pheonv@fpt.edu.vn",
-      gender: "true",
-      birthday: "11/10/1985",
-      // schoolfee: "2500000",
-      marks: 0,
-    },
-    {
-      id: 3456,
-      username: "nopt",
-      password: "iloveyou",
-      fullname: "Phạm Thị Nở",
-      email: "nopt@fpt.edu.vn",
-      gender: "false",
-      birthday: "15/05/1993",
-      // schoolfee: "2000000",
-      marks: 0,
-    },
-  ];
+app.controller("ctrlLogin", function ($scope, $http) {
+  $scope.students = [];
+  $scope.student = {
+    id: "",
+    username: "",
+    password: "",
+    fullname: "",
+    email: "",
+    gender: "",
+    birthday: "",
+    marks: 0,
+  };
 
-  // handler save to local storage
+  // handler API
 
-  const infoAccount = JSON.stringify($scope.students);
-  localStorage.setItem("account", infoAccount);
+  const api = "https://620fbe2aec8b2ee2834b77d0.mockapi.io/api/Account";
+  $http.get(api).then(function (res) {
+    $scope.students = res.data;
+    console.log($scope.students);
+  });
   // handler login
   $scope.user;
   $scope.pass;
-  let len = $scope.students.length;
   $scope.submit = () => {
-    $scope.flag = 0;
-    for (var i = 0; i < len; i++) {
+    // $scope.flag = true;
+    for (var i = 0; i < 16; i++) {
       // Validate
-      if (
-        $scope.user === $scope.students[i].username &&
-        $scope.pass === $scope.students[i].password
-      ) {
-        // flag
-        $scope.flag++;
-        // info acc
-        $scope.fullname = $scope.students[i].fullname;
+      if ($scope.user === $scope.students[i].username &&$scope.pass === $scope.students[i].password) {
+        alert("Đăng nhập thành công ! ");
+        return
+      } else {
+        alert("Sai tên đăng nhập hoặc mật khẩu !");
+        return
       }
     }
-
-    if ($scope.flag == 1) {
-      alert("Đăng nhập thành công ! "+ $scope.fullname);
-    } else {
-      alert("Sai tên đăng nhập hoặc mật khẩu !");
-    }
   };
-
 
   // get pass
   $scope.getindex = 0;
@@ -109,6 +78,4 @@ app.controller("ctrlLogin", function ($scope) {
 
   // Handler Signup
   // Add new a account
-  
 });
-

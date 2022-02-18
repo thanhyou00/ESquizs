@@ -1,6 +1,3 @@
-
-
-
 // QUIZZ
 
 app.controller("ctrlADAV", function ($scope) {
@@ -1039,12 +1036,18 @@ app.controller("ctrlADAV", function ($scope) {
       ],
     },
   ];
-  $scope.result;
   $scope.check = function () {
-    for(var i=0;i <src.length();i++) {
-      // if(src[i].AnswerId==104121) {
-        alert("oke xong")
-      // }
+    if (!$("input[name = answer]:checked").length) {
+      return;
     }
-  }
+    var answ = $("input[name = answer]:checked").val();
+
+    for (var i = 0; i < $scope.src.length; i++) {
+      if (answ == $scope.src[i].AnswerId) {
+        console.log("Đúng");
+      } else {
+        console.log("Sai");
+      }
+    }
+  };
 });

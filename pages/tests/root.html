@@ -39,8 +39,9 @@
               <input
               class="form-check-input"
               type="radio"
-              name="{{ad.Id}}"
-              ng-model="result"
+              name="answer"
+              value="{{as.Id}}"
+              checked
             />
             <label class="form-check-label"
             style="width: 100%;"
@@ -103,7 +104,11 @@
           </div>
         </div>
       </div>
-      <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Kiểm tra kết quả</a>
+      <div class="row">
+        <button ng-click="check()" class="btn btn-primary col-4" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Câu trước</button>
+        <button ng-click="check()" class="btn btn-primary col-4" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Kiểm tra kết quả</button>
+        <button ng-click="check()" class="btn btn-primary col-4" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Câu sau</button>
+      </div>
     </div>
     <!-- Pagination -->
     <div class="row mt-5">
