@@ -30,13 +30,35 @@
                   </svg>  
                 Quản lý câu hỏi
             </button>
+            <button class="nav-link" id="v-pills-feedbacks-tab" data-bs-toggle="pill" data-bs-target="#v-pills-feedbacks" type="button" role="tab" aria-controls="v-pills-feedbacks" aria-selected="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-dots" viewBox="0 0 16 16">
+                    <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                    <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                  </svg>  
+                Tin nhắn phản hồi
+            </button>
+            <button class="nav-link" id="v-pills-chars-tab" data-bs-toggle="pill" data-bs-target="#v-pills-chars" type="button" role="tab" aria-controls="v-pills-chars" aria-selected="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-line" viewBox="0 0 16 16">
+                    <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z"/>
+                  </svg>
+                Thống kê người dùng
+            </button>
+            <button class="nav-link" id="v-pills-logout-tab" data-bs-toggle="pill" data-bs-target="#v-pills-logout" type="button" role="tab" aria-controls="v-pills-logout" aria-selected="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                  </svg> 
+                  <a href="#login" class="text-decoration-none">
+                    Đăng xuất
+                  </a>
+            </button>
             </div>
             <div class="tab-content" id="v-pills-tabContent">
               <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
 
               </div>
               <div class="tab-pane fade" id="v-pills-users" role="tabpanel" aria-labelledby="v-pills-users-tab">
-                <div class="row mx-5">
+                <div class="row mx-4">
                     <table class="table table-responsive table-hover table-striped table-bordered border-primary"> 
                         <thead>
                             <tr class="table-dark">
@@ -99,6 +121,7 @@
                                                     <button type="button" class="btn btn-secondary"
                                                         data-bs-dismiss="modal">Đóng</button>
                                                     <button type="button"
+                                                        data-bs-dismiss="modal"
                                                         ng-click="onDelete($index)"
                                                         class="btn btn-danger">Xóa</button>
                                                 </div>
@@ -112,11 +135,17 @@
                 </div>
               </div>
               <div class="tab-pane fade" id="v-pills-sources" role="tabpanel" aria-labelledby="v-pills-sources-tab">
-
+                Khóa học
               </div>
               <div class="tab-pane fade" id="v-pills-questions" role="tabpanel" aria-labelledby="v-pills-questions-tab">
-
+                Câu hỏi
               </div>
+              <div class="tab-pane fade" id="v-pills-feedback" role="tabpanel" aria-labelledby="v-pills-feedback-tab">
+
+            </div>
+            <div class="tab-pane fade" id="v-pills-chars" role="tabpanel" aria-labelledby="v-pills-chars-tab">
+                Thống kê
+            </div>
             </div>
           </div>
     </div>

@@ -92,7 +92,17 @@ app.controller("ctrlAdmin", function ($scope, $http) {
     $scope.message = "Đăng ký tài khoản thành công";
     // Thêm vào table
     $scope.users.push(response.data);
- })
+ })};
+  // Remove a account
+  $scope.onDelete = function (index) {
+   const id = $scope.users[index].id;
+   const apiDelete = api + "/" + id;
+   $http.delete(apiDelete)
+       .then(function (response) {
+           // Xóa trên table
+           $scope.users.splice(index, 1);
+           alert("Xóa tài khoản thành công")
+  })
+ }
 
-  }
 });
