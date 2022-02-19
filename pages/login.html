@@ -13,7 +13,7 @@
             class="form-control"
             id="exampleFormControlInput1"
             name="username"
-            ng-model="user"
+            ng-model="user.username"
             required
             oninvalid="this.setCustomValidity('Vui lòng nhập tên đăng nhập')"
             onchange="this.setCustomValidity('')"
@@ -30,7 +30,7 @@
             class="form-control"
             id="passwo"
             check-password
-            ng-model="pass"
+            ng-model="user.password"
             required
             oninvalid="this.setCustomValidity('Vui lòng nhập mật khẩu')"
             onchange="this.setCustomValidity('')"
@@ -123,7 +123,7 @@
         </div>
         <!-- </form> -->
         <br />
-        <button type="submit" class="btn btn-primary" ng-click="submit()">
+        <button type="submit" class="btn btn-primary" ng-click="submitLogin()">
           Đăng nhập
         </button>
       </form>

@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-12 col-sm-7 pt-5">
       <h2 class="pt-5">ESQUIZ</h2>
-      <form action="" name="formUser">
+      <form action="" name="formUser" ng-submit="submitSignup($event)">
         <h2>Đăng ký</h2>
         <div class="row">
           <!-- input -->
@@ -22,7 +22,7 @@
                 oninvalid="this.setCustomValidity('Vui lòng nhập tên đăng nhập')"
                 onchange="this.setCustomValidity('')"
                 name="username"
-                ng-model="username"
+                ng-model="user.username"
               />
               <div class="text-danger" ng-hide="formUser.username.$untouched || formUser.username.$valid">
                 <small ng-show="formUser.username.$error.required"> Không được để trống </small>
@@ -43,7 +43,7 @@
                 oninvalid="this.setCustomValidity('Vui lòng nhập mật khẩu')"
                 onchange="this.setCustomValidity('')"
                 name="password"
-                ng-model="password"
+                ng-model="user.password"
               />
               <div class="text-danger" ng-hide="formUser.password.$untouched || formUser.password.$valid">
                 <small ng-show="formUser.password.$error.required"> Không được để trống </small>
@@ -86,7 +86,7 @@
                 oninvalid="this.setCustomValidity('Vui lòng nhập email')"
                 onchange="this.setCustomValidity('')"
                 name="email"
-                ng-model="email"
+                ng-model="user.email"
               />
               <div class="text-danger" ng-hide="formUser.email.$untouched || formUser.email.$valid">
                 <small ng-show="formUser.email.$error.required"> Không được để trống </small>
@@ -102,10 +102,9 @@
                 <span class="text-danger">*</span>
                 </label
               >
-              <select name="" class="form-select" ng-model="gender">
-                <option value="male">Nam</option>
-                <option value="female">Nữ</option>
-                <option value="unde">Khác</option>
+              <select name="" class="form-select" ng-model="user.gender">
+                <option value="true">Nam</option>
+                <option value="false">Nữ</option>
               </select>
             </div>
             <div class="mb-3">
@@ -124,7 +123,7 @@
                 oninvalid="this.setCustomValidity('Ngày sinh không đúng')"
                 onchange="this.setCustomValidity('')"
                 name="date"
-                ng-model="date"
+                ng-model="user.birthday"
               />
               <div class="text-danger" ng-hide="formUser.date.$untouched || formUser.date.$valid">
                 <small ng-show="formUser.date.$error.required"> Không được để trống </small>
@@ -135,6 +134,11 @@
             </div>
           </div>
         </div>
+        <div 
+            ng-show="message.length != 0"
+            class="col-8 offset-2 alert {{ isSuccess ? 'alert-success' : 'alert-danger' }}">
+            {{ message }}
+         </div>
           <!-- check  -->
         <div class="form-check">
           <input
@@ -150,7 +154,7 @@
           <span class="text-right"><a href="#login">Đăng nhập ngay ?</a></span>
         </div>
         <br />
-        <button type="submit" class="btn btn-primary">Đăng ký</button>
+        <button type="submit" class="btn btn-primary" >Đăng ký</button>
       </form>
     </div>
     <div

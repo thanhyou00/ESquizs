@@ -19,8 +19,8 @@ app.directive("checkPassword", function () {
 });
 // module
 app.controller("ctrlLogin", function ($scope, $http) {
-  $scope.students = [];
-  $scope.student = {
+  $scope.users = [];
+  $scope.user = {
     id: "",
     username: "",
     password: "",
@@ -30,52 +30,70 @@ app.controller("ctrlLogin", function ($scope, $http) {
     birthday: "",
     marks: 0,
   };
+  $scope.isSuccess = false;
+  $scope.message = "";
 
   // handler API
 
   const api = "https://620fbe2aec8b2ee2834b77d0.mockapi.io/api/Account";
-  $http.get(api).then(function (res) {
-    $scope.students = res.data;
-    console.log($scope.students);
+  $http.get(api)
+    .then(function (res) {
+    $scope.users = res.data;
+    console.log(res.data);
+  }).catch(function(error){
+    console.log(error);
   });
-  // handler login
-  $scope.user;
-  $scope.pass;
-  $scope.submit = () => {
-    // $scope.flag = true;
-    for (var i = 0; i < 16; i++) {
+  // HANDLER LOGIN
+  $scope.submitLogin = function(){
+    $scope.flag = false;
+    for (var i = 0; i < $scope.users.length; i++) {
       // Validate
-      if ($scope.user === $scope.students[i].username &&$scope.pass === $scope.students[i].password) {
-        alert("Đăng nhập thành công ! ");
-        return
-      } else {
-        alert("Sai tên đăng nhập hoặc mật khẩu !");
-        return
-      }
+      if ($scope.user.username == $scope.users[i].username &&$scope.user.password == $scope.users[i].password) {
+        $scope.flag = true;
+      } 
+    }
+    if($scope.flag) {
+      alert("Đăng nhập thành công")
+    } else {
+      alert("Sai tên tài khoản hoặc mật khẩu")
     }
   };
 
-  // get pass
+  // Fotget password
   $scope.getindex = 0;
   $scope.getpass = (getemail, getid) => {
     $scope.flagpass = 0;
-    for (var i = 0; i < $scope.students.length; i++) {
-      if (
-        getemail == $scope.students[i].email &&
-        getid == $scope.students[i].id
-      ) {
+    for (var i = 0; i < $scope.users.length; i++) {
+      if (getemail == $scope.users[i].email &&getid == $scope.users[i].id) {
         $scope.flagpass++;
         $scope.getindex = i;
       }
     }
 
-    $scope.flagpass == 1
-      ? alert(
-          "Mật khẩu của bạn là : " + $scope.students[$scope.getindex].password
-        )
-      : alert("Nhập sai mã xác nhận");
+    $scope.flagpass == 1 ? alert("Mật khẩu của bạn là : " + $scope.users[$scope.getindex].password): alert("Nhập sai mã xác nhận");
   };
 
-  // Handler Signup
+  $scope.submitSignup = function(event) {
+  event.preventDefault();
+  // HANDLER SAIGUP
+  $scope.repassword;
+  // validate
+  if($scope.repassword != $scope.user.password) {
+    alert("Mật khẩu xác nhận không trùng khớp")
+    $scope.isSuccess = false;
+    return
+  }
+
   // Add new a account
+  // Gửi request dạng POST kèm dữ liệu tới API
+  $http.post(api, $scope.user)
+  .then(function (response) {
+    // Thông báo thành công
+    $scope.isSuccess = true;
+    $scope.message = "Đăng ký tài khoản thành công";
+    // Thêm vào table
+    $scope.users.push(response.data);
+ })
+
+  }
 });
