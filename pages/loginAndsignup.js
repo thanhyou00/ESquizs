@@ -18,7 +18,7 @@ app.directive("checkPassword", function () {
   };
 });
 // module
-app.controller("ctrlLogin", function ($scope, $http) {
+app.controller("ctrlAdmin", function ($scope, $http) {
   $scope.users = [];
   $scope.user = {
     id: "",
@@ -39,7 +39,6 @@ app.controller("ctrlLogin", function ($scope, $http) {
   $http.get(api)
     .then(function (res) {
     $scope.users = res.data;
-    console.log(res.data);
   }).catch(function(error){
     console.log(error);
   });
