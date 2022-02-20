@@ -39,6 +39,7 @@ app.controller("ctrlAdmin", function ($scope, $http) {
   };
   $scope.isSuccess = false;
   $scope.message = "";
+  $scope.index = -1;
 
   // handler API Account
 
@@ -108,7 +109,26 @@ app.controller("ctrlAdmin", function ($scope, $http) {
     $scope.message = "Đăng ký tài khoản thành công";
     // Thêm vào table
     $scope.users.push(response.data);
- })};
+ })
+};
+  $scope.onFormSubmitAccount = function(event){
+    event.preventDefault();
+    if($scope.index == -1) {
+      // Add new a account
+      // Gửi request dạng POST kèm dữ liệu tới API
+      $http.post(apiAccount, $scope.user)
+      .then(function (response) {
+        // Thông báo thành công
+        $scope.isSuccess = true;
+        $scope.message = "Đăng ký tài khoản thành công";
+        // Thêm vào table
+        $scope.users.push(response.data);
+     })
+      } else {
+        alert("Cập nhật thành công")
+        $scope.onUpdateAccount();
+      }
+  }
 
   // Remove a account
   $scope.onDeleteAccount = function (index) {
@@ -121,16 +141,18 @@ app.controller("ctrlAdmin", function ($scope, $http) {
            alert("Xóa tài khoản thành công")
   })
  }
+   // Update a account
+   $scope.onUpdateAccount = function(index) {
+    $scope.users[$scope.index] = angular.copy($scope.user);
+    $scope.index = index;
+    $scope.user =  angular.copy($scope.users[index]); 
+
+}
 
 
   $scope.onFormSubmitCourse = function(event) {
     event.preventDefault();
-    // if (index == -1) {
-    //     // thêm mới
-    // } else {
-    //     // cập nhật
-    // }
-
+    if ($scope.index == -1) {
     // Add new a Course
     // Gửi request dạng POST kèm dữ liệu tới API
     $http.post(apiCourse, $scope.course)
@@ -140,7 +162,13 @@ app.controller("ctrlAdmin", function ($scope, $http) {
       $scope.onClear();
       // Thêm vào table
       $scope.courses.push(response.data);
-   })};
+   })
+    } else {
+        alert("Cập nhật thành công")
+        $scope.onUpdateCourse();
+    }
+
+};
 
      // Remove a course
      $scope.onDeleteCourse = function (index) {
@@ -155,9 +183,10 @@ app.controller("ctrlAdmin", function ($scope, $http) {
     };
   // Update a course
     $scope.onUpdateCourse = function(index) {
-      $scope.courses[$scope.index] = angular.copy($scope.course);
-      $scope.index = index;
-      $scope.course =  angular.copy($scope.courses[index]); 
+            $scope.courses[$scope.index] = angular.copy($scope.course);
+            $scope.index = index;
+            $scope.course =  angular.copy($scope.courses[index]); 
+
     }
   // Clear form
   $scope.onClear = function() {
