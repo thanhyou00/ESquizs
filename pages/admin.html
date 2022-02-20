@@ -55,10 +55,10 @@
             </div>
             <div class="tab-content" id="v-pills-tabContent">
               <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-
+                  Trang chủ quản trị
               </div>
               <div class="tab-pane fade" id="v-pills-users" role="tabpanel" aria-labelledby="v-pills-users-tab">
-                <div class="row mx-4">
+                <div class="row mx-2">
                     <table class="table table-responsive table-hover table-striped table-bordered border-primary"> 
                         <thead>
                             <tr class="table-dark">
@@ -122,7 +122,7 @@
                                                         data-bs-dismiss="modal">Đóng</button>
                                                     <button type="button"
                                                         data-bs-dismiss="modal"
-                                                        ng-click="onDelete($index)"
+                                                        ng-click="onDeleteAccount($index)"
                                                         class="btn btn-danger">Xóa</button>
                                                 </div>
                                             </div>
@@ -135,7 +135,100 @@
                 </div>
               </div>
               <div class="tab-pane fade" id="v-pills-sources" role="tabpanel" aria-labelledby="v-pills-sources-tab">
-                Khóa học
+                <div class="row mb-5">
+                  <form class="col-8 offset-1" ng-submit="onFormSubmitCourse($event)">
+                    <div class="form-group mt-3">
+                        <label for="">ID</label>
+                        <input class="form-control"
+                            type="text"
+                            ng-model="course.Id">
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="">Name</label>
+                        <input class="form-control"
+                            type="text"
+                            ng-model="course.Name">
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="">Logo</label>
+                        <input class="form-control"
+                            type="text"
+                            ng-model="course.Logo">
+                    </div>
+                    <div class="form-group mt-3">
+                        <button class="btn btn-primary">Lưu</button>
+                        <button class="btn btn-primary ml-3">Làm mới</button>
+                    </div>
+                </form>
+                </div>
+
+                <div class="row mx-2">
+                  <table class="table table-responsive table-hover table-striped table-bordered border-primary"> 
+                      <thead>
+                          <tr class="table-dark">
+                              <td>STT</td>
+                              <td>ID</td>
+                              <td>Name</td>
+                              <td>Logo</td>
+                              <td colspan="2">Thao tác</td>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr ng-repeat="cs in courses">
+                              <td>{{cs.id}}</td>
+                              <td>{{cs.Id}}</td>
+                              <td>{{cs.Name}}</td>
+                              <td>{{cs.Logo}}</td>
+                              <td>
+                                  <button class="btn btn-primary">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                          <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                        </svg>
+                                      Sửa
+                                  </button>
+                              </td>
+                              <td>
+                                  <button
+                                      data-bs-toggle="modal"
+                                      data-bs-target="#modal_delete_{{ cs.Id }}"
+                                      class="btn btn-danger">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-x" viewBox="0 0 16 16">
+                                          <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                                          <path fill-rule="evenodd" d="M12.146 5.146a.5.5 0 0 1 .708 0L14 6.293l1.146-1.147a.5.5 0 0 1 .708.708L14.707 7l1.147 1.146a.5.5 0 0 1-.708.708L14 7.707l-1.146 1.147a.5.5 0 0 1-.708-.708L13.293 7l-1.147-1.146a.5.5 0 0 1 0-.708z"/>
+                                        </svg>    
+                                      Xóa
+                                  </button>
+                                  <div class="modal fade" id="modal_delete_{{ cs.Id }}"
+                                      tabindex="-1" aria-hidden="true">
+                                      <div class="modal-dialog modal-lg">
+                                          <div class="modal-content">
+                                              <div class="modal-header">
+                                                  <h5 class="modal-title">Cảnh báo</h5>
+                                                  <button type="button"
+                                                  class="btn-close"
+                                                  data-bs-dismiss="modal"
+                                                  aria-label="Close"></button>
+                                              </div>
+                                              <div class="modal-body">
+                                              <h4>Bạn có chắc muốn xóa khóa học này ?</h4>
+                                              <small class="text-danger">Khóa học sẽ bị xóa vĩnh viễn và không thể khôi phục lại .</small>
+                                              </div>
+                                                  <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary"
+                                                      data-bs-dismiss="modal">Đóng</button>
+                                                  <button type="button"
+                                                      data-bs-dismiss="modal"
+                                                      ng-click="onDeleteCourse($index)"
+                                                      class="btn btn-danger">Xóa</button>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
               </div>
               <div class="tab-pane fade" id="v-pills-questions" role="tabpanel" aria-labelledby="v-pills-questions-tab">
                 Câu hỏi

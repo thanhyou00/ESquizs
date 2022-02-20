@@ -30,18 +30,34 @@ app.controller("ctrlAdmin", function ($scope, $http) {
     birthday: "",
     marks: 0,
   };
+  $scope.courses = [];
+  $scope.course = {
+    id :"",
+    Id : "",
+    Name : "",
+    Logo : "",
+  };
   $scope.isSuccess = false;
   $scope.message = "";
 
-  // handler API
+  // handler API Account
 
-  const api = "https://620fbe2aec8b2ee2834b77d0.mockapi.io/api/Account";
-  $http.get(api)
+  const apiAccount = "https://620fbe2aec8b2ee2834b77d0.mockapi.io/api/Account";
+  $http.get(apiAccount)
     .then(function (res) {
     $scope.users = res.data;
   }).catch(function(error){
     console.log(error);
   });
+    // handler API Course
+
+    const apiCourse = "https://620fbe2aec8b2ee2834b77d0.mockapi.io/api/courses";
+    $http.get(apiCourse)
+      .then(function (res) {
+      $scope.courses = res.data;
+    }).catch(function(error){
+      console.log(error);
+    });
   // HANDLER LOGIN
   $scope.submitLogin = function(){
     $scope.flag = false;
@@ -85,7 +101,7 @@ app.controller("ctrlAdmin", function ($scope, $http) {
 
   // Add new a account
   // Gửi request dạng POST kèm dữ liệu tới API
-  $http.post(api, $scope.user)
+  $http.post(apiAccount, $scope.user)
   .then(function (response) {
     // Thông báo thành công
     $scope.isSuccess = true;
@@ -93,16 +109,41 @@ app.controller("ctrlAdmin", function ($scope, $http) {
     // Thêm vào table
     $scope.users.push(response.data);
  })};
+
   // Remove a account
-  $scope.onDelete = function (index) {
+  $scope.onDeleteAccount = function (index) {
    const id = $scope.users[index].id;
-   const apiDelete = api + "/" + id;
-   $http.delete(apiDelete)
+   const apiDeleteAccount = apiAccount + "/" + id;
+   $http.delete(apiDeleteAccount)
        .then(function (response) {
            // Xóa trên table
            $scope.users.splice(index, 1);
            alert("Xóa tài khoản thành công")
   })
  }
+   // Remove a course
+   $scope.onDeleteCourse = function (index) {
+    const id = $scope.courses[index].id;
+    const apiDeleteCourse = apiCourse + "/" + id;
+    $http.delete(apiDeleteCourse)
+        .then(function (response) {
+            // Xóa trên table
+            $scope.courses.splice(index, 1);
+            alert("Xóa khóa học thành công")
+   })
+  };
+
+  $scope.onFormSubmitCourse = function(event) {
+    event.preventDefault();
+
+    // Add new a account
+    // Gửi request dạng POST kèm dữ liệu tới API
+    $http.post(apiCourse, $scope.course)
+    .then(function (response) {
+      // Thông báo thành công
+      alert("Thêm mới khóa học thành công")
+      // Thêm vào table
+      $scope.courses.push(response.data);
+   })};
 
 });
