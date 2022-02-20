@@ -55,7 +55,7 @@
             </div>
             <div class="tab-content" id="v-pills-tabContent">
               <div class="tab-pane fade show active bg-light" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                  Trang chủ quản trị
+                  <img src="../img/dashboard.svg" alt="" style="width: 100%;">
               </div>
               <div class="tab-pane fade bg-light" id="v-pills-users" role="tabpanel" aria-labelledby="v-pills-users-tab">
                 <div class="row mb-5">
@@ -65,73 +65,88 @@
                         <input  class="form-control"
                                 type="text"
                                 ng-model="user.fullname"
+                                name="fullname"
                                 required
-                                oninvalid="this.setCustomValidity('Vui lòng nhập tên đầy đủ')"
-                                onchange="this.setCustomValidity('')"
                                 >
+                                <div class="text-danger" ng-hide="formAccounts.fullname.$untouched || formAccounts.fullname.$valid">
+                                    <small ng-show="formAccounts.fullname.$error.required"> Không được để trống </small>
+                                </div>
                     </div>
                     <div class="form-group mt-3">
                         <label for="">Username</label>
                         <input  class="form-control"
                                 type="text"
                                 ng-model="user.username"
+                                name="username"
                                 required
-                                oninvalid="this.setCustomValidity('Vui lòng nhập tên đăng nhập')"
-                                onchange="this.setCustomValidity('')"
                                 >
+                                <div class="text-danger" ng-hide="formAccounts.username.$untouched || formAccounts.username.$valid">
+                                    <small ng-show="formAccounts.username.$error.required"> Không được để trống </small>
+                                </div>
                     </div>
                     <div class="form-group mt-3">
                         <label for="">Email</label>
                         <input class="form-control"
                                type="email"
                                ng-model="user.email"
+                               name="email"
                                required
-                               oninvalid="this.setCustomValidity('Vui lòng nhập email')"
-                               onchange="this.setCustomValidity('')"
                                >
+                               <div class="text-danger" ng-hide="formAccounts.email.$untouched || formAccounts.email.$valid">
+                                <small ng-show="formAccounts.email.$error.required"> Không được để trống </small>
+                                <small ng-show="formAccounts.email.$error.email">Không đúng định dạng email</small>
+                            </div>
                     </div>
                     <div class="form-group mt-3">
                         <label for="">Password</label>
                         <input class="form-control"
-                            type="password"
-                            ng-model="user.password"
-                            required
-                            oninvalid="this.setCustomValidity('Vui lòng nhập mật khẩu')"
-                            onchange="this.setCustomValidity('')"
+                               type="password"
+                               ng-model="user.password"
+                               name="password"
+                               required
                             >
+                            <div class="text-danger" ng-hide="formAccounts.password.$untouched || formAccounts.password.$valid">
+                                <small ng-show="formAccounts.password.$error.required"> Không được để trống </small>
+                            </div>
                     </div>
                     <div class="form-group mt-3">
                         <label  for="">Gender</label>
                         <input  class="form-control"
                                 type="text"
                                 ng-model="user.gender"
+                                name="gender"
                                 required
-                                oninvalid="this.setCustomValidity('Vui lòng nhập giới tính')"
-                                onchange="this.setCustomValidity('')"
                                 >
+                            <div class="text-danger" ng-hide="formAccounts.gender.$untouched || formAccounts.gender.$valid">
+                                <small ng-show="formAccounts.gender.$error.required"> Không được để trống </small>
+                            </div>
                     </div>
                     <div class="form-group mt-3">
                         <label for="">Marks</label>
                         <input class="form-control"
                                 type="number"
                                 ng-model="user.marks"
+                                name="marks"
                                 required
-                                oninvalid="this.setCustomValidity('Vui lòng nhập điểm')"
-                                onchange="this.setCustomValidity('')"
                                 >
+                            <div class="text-danger" ng-hide="formAccounts.marks.$untouched || formAccounts.marks.$valid">
+                                <small ng-show="formAccounts.marks.$error.required"> Không được để trống </small>
+                            </div>    
                     </div>
                     <div class="form-group mt-3">
                         <label for="">Birdthday</label>
                         <input class="form-control"
                                type="text"
                                ng-model="user.birthday"
+                               name="birdthday"
                                required
-                               oninvalid="this.setCustomValidity('Vui lòng nhập ngày sinh')"
-                               onchange="this.setCustomValidity('')"
                                >       
+                            <div class="text-danger" ng-hide="formAccounts.birdthday.$untouched || formAccounts.birdthday.$valid">
+                                <small ng-show="formAccounts.birdthday.$error.required"> Không được để trống </small>
+                            </div>    
                     </div>
                     <div class="form-group mt-3">
-                        <button class="btn btn-primary" ng-submit="onFormSubmitAccount($event)">Lưu</button>
+                        <button class="btn btn-primary" ng-click="onFormSubmitAccount($event)">Lưu</button>
                         <button class="btn btn-primary ml-3" ng-click="onClearAccount()">Làm mới</button>
                     </div>
                 </form>
@@ -214,39 +229,45 @@
               </div>
               <div class="tab-pane fade bg-light" id="v-pills-sources" role="tabpanel" aria-labelledby="v-pills-sources-tab">
                 <div class="row mb-5">
-                  <form class="col-8 offset-1" >
+                  <form class="col-8 offset-1" name="formCourses">
                     <div class="form-group mt-3">
                         <label for="">ID</label>
                         <input class="form-control"
                             type="text"
                             ng-model="course.Id"
+                            name="id"
                             required
-                            oninvalid="this.setCustomValidity('Vui lòng nhập mã')"
-                            onchange="this.setCustomValidity('')"
                             >
+                            <div class="text-danger" ng-hide="formCourses.id.$untouched || formCourses.id.$valid">
+                                <small ng-show="formCourses.id.$error.required"> Không được để trống </small>
+                            </div> 
                     </div>
                     <div class="form-group mt-3">
                         <label for="">Name</label>
                         <input class="form-control"
                             type="text"
                             ng-model="course.Name"
+                            name="name"
                             required
-                            oninvalid="this.setCustomValidity('Vui lòng nhập tên khóa học')"
-                            onchange="this.setCustomValidity('')"
                             >
+                            <div class="text-danger" ng-hide="formCourses.name.$untouched || formCourses.name.$valid">
+                                <small ng-show="formCourses.name.$error.required"> Không được để trống </small>
+                            </div> 
                     </div>
                     <div class="form-group mt-3">
                         <label for="">Logo</label>
                         <input class="form-control"
                             type="text"
                             ng-model="course.Logo"
+                            name="logo"
                             required
-                            oninvalid="this.setCustomValidity('Vui lòng nhập đường dẫn ảnh')"
-                            onchange="this.setCustomValidity('')"
                             >
+                            <div class="text-danger" ng-hide="formCourses.logo.$untouched || formCourses.logo.$valid">
+                                <small ng-show="formCourses.logo.$error.required"> Không được để trống </small>
+                            </div> 
                     </div>
                     <div class="form-group mt-3">
-                        <button class="btn btn-primary" ng-submit="onFormSubmitCourse($event)">Lưu</button>
+                        <button class="btn btn-primary" ng-click="onFormSubmitCourse($event)">Lưu</button>
                         <button class="btn btn-primary ml-3" ng-click="onClearCourse()">Làm mới</button>
                     </div>
                 </form>

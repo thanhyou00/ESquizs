@@ -28,7 +28,7 @@ app.controller("ctrlAdmin", function ($scope, $http) {
     email: "",
     gender: "",
     birthday: "",
-    marks: 0,
+    marks: "",
   };
   $scope.courses = [];
   $scope.course = {
@@ -164,7 +164,7 @@ app.controller("ctrlAdmin", function ($scope, $http) {
     .then(function (response) {
       // Thông báo thành công
       alert("Thêm mới khóa học thành công")
-      $scope.onClear();
+      $scope.onClearCourse();
       // Thêm vào table
       $scope.courses.push(response.data);
    })
