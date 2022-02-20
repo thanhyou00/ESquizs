@@ -32,3 +32,10 @@ html {
 .eff img:hover {
     transform: scale(1.1);
 }
+
+.table-scrollable {
+    overflow-x: auto;
+    max-width: 900px;
+    max-height: 500px;
+    margin: auto;
+  }
