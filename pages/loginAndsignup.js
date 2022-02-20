@@ -119,8 +119,8 @@ app.controller("ctrlAdmin", function ($scope, $http) {
       $http.post(apiAccount, $scope.user)
       .then(function (response) {
         // Thông báo thành công
-        $scope.isSuccess = true;
-        $scope.message = "Đăng ký tài khoản thành công";
+        alert("Thêm mới tài khoản thành công")
+        $scope.onClearAccount();
         // Thêm vào table
         $scope.users.push(response.data);
      })
@@ -148,6 +148,11 @@ app.controller("ctrlAdmin", function ($scope, $http) {
     $scope.user =  angular.copy($scope.users[index]); 
 
 }
+  // Clear form
+  $scope.onClearAccount = function() {
+    $scope.user = {};
+    $scope.index = -1;
+   }
 
 
   $scope.onFormSubmitCourse = function(event) {
@@ -189,7 +194,7 @@ app.controller("ctrlAdmin", function ($scope, $http) {
 
     }
   // Clear form
-  $scope.onClear = function() {
+  $scope.onClearCourse = function() {
     $scope.course = {};
     $scope.index = -1;
    }
