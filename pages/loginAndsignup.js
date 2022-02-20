@@ -121,29 +121,49 @@ app.controller("ctrlAdmin", function ($scope, $http) {
            alert("Xóa tài khoản thành công")
   })
  }
-   // Remove a course
-   $scope.onDeleteCourse = function (index) {
-    const id = $scope.courses[index].id;
-    const apiDeleteCourse = apiCourse + "/" + id;
-    $http.delete(apiDeleteCourse)
-        .then(function (response) {
-            // Xóa trên table
-            $scope.courses.splice(index, 1);
-            alert("Xóa khóa học thành công")
-   })
-  };
+
 
   $scope.onFormSubmitCourse = function(event) {
     event.preventDefault();
+    // if (index == -1) {
+    //     // thêm mới
+    // } else {
+    //     // cập nhật
+    // }
 
-    // Add new a account
+    // Add new a Course
     // Gửi request dạng POST kèm dữ liệu tới API
     $http.post(apiCourse, $scope.course)
     .then(function (response) {
       // Thông báo thành công
       alert("Thêm mới khóa học thành công")
+      $scope.onClear();
       // Thêm vào table
       $scope.courses.push(response.data);
    })};
+
+     // Remove a course
+     $scope.onDeleteCourse = function (index) {
+      const id = $scope.courses[index].id;
+      const apiDeleteCourse = apiCourse + "/" + id;
+      $http.delete(apiDeleteCourse)
+          .then(function (response) {
+              // Xóa trên table
+              $scope.courses.splice(index, 1);
+              alert("Xóa khóa học thành công")
+     })
+    };
+  // Update a course
+    $scope.onUpdateCourse = function(index) {
+      $scope.courses[$scope.index] = angular.copy($scope.course);
+      $scope.index = index;
+      $scope.course =  angular.copy($scope.courses[index]); 
+    }
+  // Clear form
+  $scope.onClear = function() {
+    $scope.course = {};
+    $scope.index = -1;
+   }
+
 
 });
