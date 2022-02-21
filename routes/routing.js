@@ -9,7 +9,7 @@ app.config(function ($routeProvider, $locationProvider) {
     // menu
     .when("/", {
       templateUrl: "/pages/login.html",
-      controller: "ctrlLogin",
+      controller: "ctrlAdmin",
     })
     .when("/home", {
       templateUrl: "/pages/home.html",

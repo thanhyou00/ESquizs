@@ -4,37 +4,42 @@ app.controller("ctrlADAV", function ($scope, $http) {
   $scope.title = "Lập trình Android nâng cao";
   $scope.srcs = [];
   $scope.src = {
-    "Id": "",
-    "Text": "",
-    "Marks": "",
-    "AnswerId": "",
-    "Answers": [
+    Id: "",
+    Text: "",
+    Marks: "",
+    AnswerId: "",
+    Answers: [
      {
-      "Id": "",
-      "Text": ""
+      Id: "",
+      Text: ""
      },
      {
-      "Id": "",
-      "Text": ""
+      Id: "",
+      Text: ""
      },
      {
-      "Id": "",
-      "Text": ""
+      Id: "",
+      Text: ""
      },
      {
-      "Id": "",
-      "Text": ""
+      Id: "",
+      Text: ""
      }
     ]
   };
-  $scope.srcs.Id = 1;
+
+  $scope.ID = 1;
+  // $scope.srcs.Id
+  $scope.len;
   // function next
   $scope.nextQuestion = function() {
-    console.log('ok');
-    $scope.srcs.Id++;
-    $scope.getQuestions=function(ID){
-      return $scope.srcs[ID];
-    };
+    $scope.ID++;
+    console.log($scope.ID);
+    $scope.getQuestions($scope.ID);
+  };
+  // getquestion
+  $scope.getQuestions = function(ID){
+    $scope.srcs = $scope.srcs[$scope.ID];
   };
   // function check
   $scope.check = function () {
@@ -59,14 +64,8 @@ app.controller("ctrlADAV", function ($scope, $http) {
   $http.get(api) // Gửi request dạng GET lên API
       .then(function (response) {
           $scope.srcs = response.data;
-          // $scope.len = $scope.srcs.length;
-          console.log($scope.srcs);
+          $scope.len = $scope.srcs.length;
+          console.log($scope.srcs);      
   });
-      const ID = $scope.srcs.Id;
-      return {
-          getQuestions:function(ID) {
-          return $scope.srcs[ID];
-        }
-      };
 
 });
