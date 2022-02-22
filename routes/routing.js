@@ -1,6 +1,7 @@
 // module
 
 var app = angular.module("myroutes", ["ngRoute"]);
+// mấy cái controller kia chỉ cần app.controller
 // angular.module('ng').filter('tel', function (){});
 app.config(function ($routeProvider, $locationProvider) {
   //inject $locationProvider service

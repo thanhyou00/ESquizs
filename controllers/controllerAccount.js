@@ -91,7 +91,7 @@ app.controller("ctrlAdmin", function ($scope, $http) {
 
   $scope.submitSignup = function(event) {
   event.preventDefault();
-  // HANDLER SAIGUP
+  // HANDLER SIGNUP
   $scope.repassword;
   // validate
   if($scope.repassword != $scope.user.password) {
