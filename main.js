@@ -46,7 +46,7 @@ function startTimer(duration, display) {
   }, 1000);
 }
 
-window.onload =  function() {
+window.onload = function() {
   let fifteenMinutes = 60 * 15,
    display = document.querySelector("#mytime");
   startTimer(fifteenMinutes, display);
