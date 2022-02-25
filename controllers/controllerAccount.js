@@ -166,7 +166,9 @@ app.controller("ctrlAdmin", function ($scope, $http) {
      })
       } else {
         alert("Cập nhật thành công")
-        $scope.onUpdateAccount();
+        const id = $scope.users[$scope.index].id;
+        $http.put("https://620fbe2aec8b2ee2834b77d0.mockapi.io/api/Account/" +id,$scope.user);
+        $scope.users[$scope.index] = angular.copy($scope.user); // update to table
       }
   }
 
@@ -183,9 +185,9 @@ app.controller("ctrlAdmin", function ($scope, $http) {
  }
    // Update a account
    $scope.onUpdateAccount = function(index) {
-    $scope.users[$scope.index] = angular.copy($scope.user);
+    $scope.users[$scope.index] = angular.copy($scope.user); // update to table
     $scope.index = index;
-    $scope.user =  angular.copy($scope.users[index]); 
+    $scope.user =  angular.copy($scope.users[index]); // get data from table to form
 }
   // Clear form
   $scope.onClearAccount = function() {
@@ -209,7 +211,9 @@ app.controller("ctrlAdmin", function ($scope, $http) {
    })
     } else {
         alert("Cập nhật thành công")
-        $scope.onUpdateCourse();
+        const id = $scope.courses[$scope.index].id;
+        $http.put("https://620fbe2aec8b2ee2834b77d0.mockapi.io/api/Course/" +id,$scope.course);
+        $scope.courses[$scope.index] = angular.copy($scope.course); // update to table
     }
 
 };
@@ -242,7 +246,7 @@ app.controller("ctrlAdmin", function ($scope, $http) {
    $scope.onFormSubmitQuiz = function(event) {
     event.preventDefault();
     if ($scope.index == -1) {
-    // Add new a Course
+    // Add new a Quiz
     // Gửi request dạng POST kèm dữ liệu tới API
     $http.post(apiQuiz, $scope.quiz)
     .then(function (response) {
@@ -254,7 +258,9 @@ app.controller("ctrlAdmin", function ($scope, $http) {
    })
     } else {
         alert("Cập nhật thành công")
-        $scope.onUpdateQuiz();
+        const id = $scope.quizs[$scope.index].id;
+        $http.put("https://620fbe2aec8b2ee2834b77d0.mockapi.io/api/ADAV/" +id,$scope.quiz);
+        $scope.quizs[$scope.index] = angular.copy($scope.quiz); // update to table
     }
 
 };
