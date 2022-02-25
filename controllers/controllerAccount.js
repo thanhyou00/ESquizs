@@ -39,7 +39,7 @@ app.controller("ctrlAdmin", function ($scope, $http) {
   };
   $scope.quizs = [];
   $scope.quiz = {
-    Id: "",
+    id: "",
     Text: "",
     Marks: "",
     AnswerId: "",
@@ -240,11 +240,11 @@ app.controller("ctrlAdmin", function ($scope, $http) {
    }
    // QUIZ
    $scope.onFormSubmitQuiz = function(event) {
-    // event.preventDefault();
+    event.preventDefault();
     if ($scope.index == -1) {
     // Add new a Course
     // Gửi request dạng POST kèm dữ liệu tới API
-    $http.post(apiquiz, $scope.quiz)
+    $http.post(apiQuiz, $scope.quiz)
     .then(function (response) {
       // Thông báo thành công
       alert("Thêm mới khóa học thành công")
@@ -262,7 +262,7 @@ app.controller("ctrlAdmin", function ($scope, $http) {
      // Remove a course
      $scope.onDeleteQuiz = function (index) {
       const id = $scope.quizs[index].id;
-      const apiDeletequiz = apiquiz + "/" + id;
+      const apiDeletequiz = apiQuiz + "/" + id;
       $http.delete(apiDeletequiz)
           .then(function (response) {
               // Xóa trên table
