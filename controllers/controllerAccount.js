@@ -259,7 +259,7 @@ app.controller("ctrlAdmin", function ($scope, $http) {
 
 };
 
-     // Remove a course
+     // Remove a quiz
      $scope.onDeleteQuiz = function (index) {
       const id = $scope.quizs[index].id;
       const apiDeletequiz = apiQuiz + "/" + id;
@@ -268,10 +268,9 @@ app.controller("ctrlAdmin", function ($scope, $http) {
               // Xóa trên table
               $scope.quizs.splice(index, 1);
               alert("Xóa khóa học thành công")
-              console.log(apiDeletequiz);
      })
     };
-  // Update a course
+  // Update a quiz
     $scope.onUpdateQuiz = function(index) {
       $scope.quizs[$scope.index] = angular.copy($scope.quiz);
       $scope.index = index;
