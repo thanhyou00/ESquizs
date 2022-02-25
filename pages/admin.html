@@ -382,7 +382,7 @@
                         <label for="">AnswerId</label>
                         <input class="form-control"
                             type="text"
-                            ng-model="quiz.Marks"
+                            ng-model="quiz.AnswerId"
                             name="answerId"
                             required
                             >
@@ -392,6 +392,18 @@
                     </div>
                     <div class="form-group mt-3">
                         <label for="">Answer A</label>
+                        <input class="form-control"
+                            type="text"
+                            ng-model="quiz.Answers[0].Text"
+                            name="answerTextA"
+                            required
+                            >
+                            <div class="text-danger" ng-hide="formCourses.answerTextA.$untouched || formCourses.answerTextA.$valid">
+                                <small ng-show="formCourses.answerTextA.$error.required"> Không được để trống </small>
+                            </div> 
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="">AnswerId A</label>
                         <input class="form-control"
                             type="text"
                             ng-model="quiz.Answers[0].Id"
@@ -406,6 +418,18 @@
                         <label for="">Answer B</label>
                         <input class="form-control"
                             type="text"
+                            ng-model="quiz.Answers[1].Text"
+                            name="answerTextB"
+                            required
+                            >
+                            <div class="text-danger" ng-hide="formCourses.answerTextB.$untouched || formCourses.answerTextB.$valid">
+                                <small ng-show="formCourses.answerTextB.$error.required"> Không được để trống </small>
+                            </div> 
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="">AnswerId B</label>
+                        <input class="form-control"
+                            type="text"
                             ng-model="quiz.Answers[1].Id"
                             name="answerIdB"
                             required
@@ -416,6 +440,18 @@
                     </div>
                     <div class="form-group mt-3">
                         <label for="">Answer C</label>
+                        <input class="form-control"
+                            type="text"
+                            ng-model="quiz.Answers[2].Text"
+                            name="answerTextC"
+                            required
+                            >
+                            <div class="text-danger" ng-hide="formCourses.answerTextC.$untouched || formCourses.answerTextC.$valid">
+                                <small ng-show="formCourses.answerTextC.$error.required"> Không được để trống </small>
+                            </div> 
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="">AnswerId C</label>
                         <input class="form-control"
                             type="text"
                             ng-model="quiz.Answers[2].Id"
@@ -430,6 +466,18 @@
                         <label for="">Answer D</label>
                         <input class="form-control"
                             type="text"
+                            ng-model="quiz.Answers[3].Text"
+                            name="answerTextD"
+                            required
+                            >
+                            <div class="text-danger" ng-hide="formCourses.answerTextD.$untouched || formCourses.answerTextD.$valid">
+                                <small ng-show="formCourses.answerTextD.$error.required"> Không được để trống </small>
+                            </div> 
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="">AnswerId D</label>
+                        <input class="form-control"
+                            type="text"
                             ng-model="quiz.Answers[3].Id"
                             name="answerIdD"
                             required
@@ -438,6 +486,7 @@
                                 <small ng-show="formCourses.answerIdD.$error.required"> Không được để trống </small>
                             </div> 
                     </div>
+                    
 
                     <div class="form-group mt-3">
                         <button class="btn btn-primary" ng-click="onFormSubmitQuiz($event)">Lưu</button>

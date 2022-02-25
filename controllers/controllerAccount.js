@@ -248,7 +248,7 @@ app.controller("ctrlAdmin", function ($scope, $http) {
     .then(function (response) {
       // Thông báo thành công
       alert("Thêm mới khóa học thành công")
-      $scope.onClearquiz();
+      $scope.onClearQuiz();
       // Thêm vào table
       $scope.quizs.push(response.data);
    })
