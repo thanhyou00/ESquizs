@@ -37,9 +37,36 @@ app.controller("ctrlAdmin", function ($scope, $http) {
     Name : "",
     Logo : "",
   };
+  $scope.quizs = [];
+  $scope.quiz = {
+    Id: "",
+    Text: "",
+    Marks: "",
+    AnswerId: "",
+    Answers: [
+     {
+      Id: "",
+      Text: ""
+     },
+     {
+      Id: "",
+      Text: ""
+     },
+     {
+      Id: "",
+      Text: ""
+     },
+     {
+      Id: "",
+      Text: ""
+     }
+    ]
+  }
+
   $scope.isSuccess = false;
   $scope.message = "";
   $scope.index = -1;
+  // $scope.fullname  ;
 
   // handler API Account
 
@@ -52,10 +79,19 @@ app.controller("ctrlAdmin", function ($scope, $http) {
   });
     // handler API Course
 
-    const apiCourse = "https://620fbe2aec8b2ee2834b77d0.mockapi.io/api/courses";
+    const apiCourse = "https://620fbe2aec8b2ee2834b77d0.mockapi.io/api/Course";
     $http.get(apiCourse)
       .then(function (res) {
       $scope.courses = res.data;
+    }).catch(function(error){
+      console.log(error);
+    });
+    // handler API Quizs
+
+    const apiQuiz = "https://620fbe2aec8b2ee2834b77d0.mockapi.io/api/ADAV";
+    $http.get(apiQuiz)
+      .then(function (res) {
+      $scope.quizs = res.data;
     }).catch(function(error){
       console.log(error);
     });
@@ -66,6 +102,8 @@ app.controller("ctrlAdmin", function ($scope, $http) {
       // Validate
       if ($scope.user.username == $scope.users[i].username &&$scope.user.password == $scope.users[i].password) {
         $scope.flag = true;
+        $scope.user.fullname = $scope.users[i].fullname;
+        console.log($scope.user.fullname);
       } 
     }
     if($scope.flag) {
@@ -90,7 +128,7 @@ app.controller("ctrlAdmin", function ($scope, $http) {
   };
 
   $scope.submitSignup = function(event) {
-  event.preventDefault();
+  // event.preventDefault();
   // HANDLER SIGNUP
   $scope.repassword;
   // validate
@@ -111,8 +149,10 @@ app.controller("ctrlAdmin", function ($scope, $http) {
     $scope.users.push(response.data);
  })
 };
+
+  // ACCOUNT
   $scope.onFormSubmitAccount = function(event){
-    event.preventDefault();
+    // event.preventDefault();
     if($scope.index == -1) {
       // Add new a account
       // Gửi request dạng POST kèm dữ liệu tới API
@@ -146,7 +186,6 @@ app.controller("ctrlAdmin", function ($scope, $http) {
     $scope.users[$scope.index] = angular.copy($scope.user);
     $scope.index = index;
     $scope.user =  angular.copy($scope.users[index]); 
-
 }
   // Clear form
   $scope.onClearAccount = function() {
@@ -154,9 +193,9 @@ app.controller("ctrlAdmin", function ($scope, $http) {
     $scope.index = -1;
    }
 
-
+   // COURSE
   $scope.onFormSubmitCourse = function(event) {
-    event.preventDefault();
+    // event.preventDefault();
     if ($scope.index == -1) {
     // Add new a Course
     // Gửi request dạng POST kèm dữ liệu tới API
@@ -184,20 +223,67 @@ app.controller("ctrlAdmin", function ($scope, $http) {
               // Xóa trên table
               $scope.courses.splice(index, 1);
               alert("Xóa khóa học thành công")
+              console.log(apiDeleteCourse);
      })
     };
   // Update a course
     $scope.onUpdateCourse = function(index) {
-            $scope.courses[$scope.index] = angular.copy($scope.course);
-            $scope.index = index;
-            $scope.course =  angular.copy($scope.courses[index]); 
+      $scope.courses[$scope.index] = angular.copy($scope.course);
+      $scope.index = index;
+      $scope.course =  angular.copy($scope.courses[index]); 
+    };
 
-    }
   // Clear form
   $scope.onClearCourse = function() {
     $scope.course = {};
     $scope.index = -1;
    }
+   // QUIZ
+   $scope.onFormSubmitQuiz = function(event) {
+    // event.preventDefault();
+    if ($scope.index == -1) {
+    // Add new a Course
+    // Gửi request dạng POST kèm dữ liệu tới API
+    $http.post(apiquiz, $scope.quiz)
+    .then(function (response) {
+      // Thông báo thành công
+      alert("Thêm mới khóa học thành công")
+      $scope.onClearquiz();
+      // Thêm vào table
+      $scope.quizs.push(response.data);
+   })
+    } else {
+        alert("Cập nhật thành công")
+        $scope.onUpdateQuiz();
+    }
+
+};
+
+     // Remove a course
+     $scope.onDeleteQuiz = function (index) {
+      const id = $scope.quizs[index].id;
+      const apiDeletequiz = apiquiz + "/" + id;
+      $http.delete(apiDeletequiz)
+          .then(function (response) {
+              // Xóa trên table
+              $scope.quizs.splice(index, 1);
+              alert("Xóa khóa học thành công")
+              console.log(apiDeletequiz);
+     })
+    };
+  // Update a course
+    $scope.onUpdateQuiz = function(index) {
+      $scope.quizs[$scope.index] = angular.copy($scope.quiz);
+      $scope.index = index;
+      $scope.quiz =  angular.copy($scope.quizs[index]); 
+    };
+
+  // Clear form
+  $scope.onClearQuiz = function() {
+    $scope.quiz = {};
+    $scope.index = -1;
+   }
+
 
 
 });

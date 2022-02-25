@@ -112,3 +112,30 @@
     </div>
   </div>
 </div>
+<script>
+// countdown from stackoverflow:))
+// https://stackoverflow.com/questions/20618355/how-to-write-a-countdown-timer-in-javascript
+        window.onload = function() {
+        let timer = 60 * 15,
+        minutes,
+        seconds;
+        const myTimer = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        const txtContent = document.querySelector("#mytime").textContent = (minutes + ":" + seconds);
+
+        if (--timer < 0) {
+          timer = duration;
+        }
+
+        if (txtContent == "00:00") {
+          alert("Hết giờ");
+          clearInterval(myTimer);
+        }
+        }, 1000);
+        };
+</script>

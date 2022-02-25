@@ -1,7 +1,7 @@
-<div class="row mb-4">
+<div class="row mb-4" ng-controller="ctrlAdmin">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark po-fixed">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#/home">ESquiz</a>
+        <a class="navbar-brand" href="#home">ESquiz</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -19,22 +19,22 @@
               <a
                 class="nav-link text-white"
                 aria-current="page"
-                href="#/home"
+                href="#home"
                 >Trang chủ</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#/test"
+              <a class="nav-link text-white" href="#test"
                 >Thi trắc nghiệm</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#/introduce"
+              <a class="nav-link text-white" href="#introduce"
                 >Giới thiệu</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#/contact">Liên hệ</a>
+              <a class="nav-link text-white" href="#contact">Liên hệ</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-white" href="#feedback">Góp ý</a>
@@ -84,6 +84,9 @@
             </li>
           </ul>
         </div>
+        <div class="d-flex text-white"> 
+          Xin chào  {{user.fullname}}
+         </div>
       </div>
     </nav>
   </div>
