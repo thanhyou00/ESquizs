@@ -28,17 +28,22 @@ app.controller("ctrlADAV", function ($scope, $http) {
     ]
   };
     // Get API
-    const api = 'https://620fbe2aec8b2ee2834b77d0.mockapi.io/api/ADAV';
+    const api ='https://620fbe2aec8b2ee2834b77d0.mockapi.io/api/ADAV';
     $http.get(api) // Gửi request dạng GET lên API
         .then(function (response) {
-            $scope.srcs = response.data;  
+
+            $scope.srcs = response.data.filter(function(us){
+              return us.id == 1;
+            });  
             $scope.len= $scope.srcs.length; 
+            console.log($scope.srcs);
     });
 
   $scope.ID = 1;
   $scope.totalMark= 0;
   // $scope.srcs.Id
-  $scope.len; 
+  $scope.len = 0; 
+
   // function next
   $scope.nextQuestion = function() {
     $scope.ID++;

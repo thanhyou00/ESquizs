@@ -90,7 +90,7 @@
 // countdown from stackoverflow:))
 // https://stackoverflow.com/questions/20618355/how-to-write-a-countdown-timer-in-javascript
         window.onload = function() {
-        let timer = 60 * 15,
+        let timer = 60 * 1,
         minutes,
         seconds;
         const myTimer = setInterval(function () {
@@ -103,7 +103,7 @@
         const txtContent = document.querySelector("#mytime").textContent = (minutes + ":" + seconds);
 
         if (--timer < 0) {
-          timer = duration;
+          timer = 60*1;
         }
 
         if (txtContent == "00:00") {
