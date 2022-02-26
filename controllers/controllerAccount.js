@@ -96,7 +96,8 @@ app.controller("ctrlAdmin", function ($scope, $http) {
       console.log(error);
     });
   // HANDLER LOGIN
-  $scope.submitLogin = function(){
+  $scope.submitLogin = function(event){
+    // event.preventDefault();
     $scope.flag = false;
     for (var i = 0; i < $scope.users.length; i++) {
       // Validate
@@ -227,7 +228,6 @@ app.controller("ctrlAdmin", function ($scope, $http) {
               // Xóa trên table
               $scope.courses.splice(index, 1);
               alert("Xóa khóa học thành công")
-              console.log(apiDeleteCourse);
      })
     };
   // Update a course
