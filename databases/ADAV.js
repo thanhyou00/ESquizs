@@ -27,32 +27,28 @@ app.controller("ctrlADAV", function ($scope, $http) {
      }
     ]
   };
-    // Get API
-    const api ='https://620fbe2aec8b2ee2834b77d0.mockapi.io/api/ADAV';
-    $http.get(api) // Gửi request dạng GET lên API
-        .then(function (response) {
 
-            $scope.srcs = response.data.filter(function(us){
-              return us.id == 1;
-            });  
-            $scope.len= $scope.srcs.length; 
-            console.log($scope.srcs);
-    });
+  $scope.showQuestion = function() {
+        // Get API
+        const api ='https://620fbe2aec8b2ee2834b77d0.mockapi.io/api/ADAV';
+        $http.get(api) // Gửi request dạng GET lên API
+            .then(function (response) {
+                $scope.srcs = response.data.filter(function(us){
+                  return us.id == $scope.ID;
+                });  
+                $scope.len= response.data.length; 
+                console.log($scope.ID);
+        });
+  }
 
   $scope.ID = 1;
   $scope.totalMark= 0;
-  // $scope.srcs.Id
   $scope.len = 0; 
 
   // function next
   $scope.nextQuestion = function() {
     $scope.ID++;
-    console.log($scope.ID);
-    $scope.getQuestions($scope.ID);
-  };
-  // getquestion
-  $scope.getQuestions = function(ID){
-    $scope.srcs = $scope.srcs[$scope.ID];
+    $scope.showQuestion($scope.ID)
   };
   // function check
   $scope.check = function () {

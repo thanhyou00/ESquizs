@@ -80,8 +80,8 @@
       </div>
       <div>
         <button ng-click="check()" class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Kiểm tra kết quả</button>
-        <button  class="btn btn-primary" role="button">Câu tiếp</button>
-        <button ng-click="start()" class="btn btn-primary" role="button">Bắt đầu</button>
+        <button  class="btn btn-primary" role="button" ng-click="showQuestion()">Bắt đầu làm bài</button>
+        <button  class="btn btn-primary" role="button" ng-click="nextQuestion()">Câu tiếp theo</button>
       </div>
     </div>
   </div>
@@ -90,7 +90,7 @@
 // countdown from stackoverflow:))
 // https://stackoverflow.com/questions/20618355/how-to-write-a-countdown-timer-in-javascript
         window.onload = function() {
-        let timer = 60 * 1,
+        let timer = 60 * 15,
         minutes,
         seconds;
         const myTimer = setInterval(function () {
