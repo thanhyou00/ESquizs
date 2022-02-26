@@ -24,6 +24,9 @@
         </svg>
         <span id="mytime">15:00</span> giây</h5>
     </div>
+    <div class="row p-5">
+      <button  class="btn btn-primary" role="button" ng-click="showQuestion()" ng-show="isShow">Bắt đầu làm bài</button>
+    </div>
     <div class="row mt-4" ng-repeat="ad in srcs">
       <div class="card">
         <div class="card-header row text-white bg-success" style="width: 100%">
@@ -63,7 +66,7 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                    <h5>Số câu đúng : 30/50</h5>
+                    <h5>Số câu đúng : <span>{{totalMark}}</span> / <span>{{len}}</span> </h5>
                     <h5>Tổng điểm đạt được : <span>{{totalMark}}</span> điểm</h5>
                     <h5>Thời gian hoàn thành : 5 phút 50 giây</h5>
                 </div>
@@ -80,36 +83,8 @@
       </div>
       <div>
         <button ng-click="check()" class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Kiểm tra kết quả</button>
-        <button  class="btn btn-primary" role="button" ng-click="showQuestion()">Bắt đầu làm bài</button>
         <button  class="btn btn-primary" role="button" ng-click="nextQuestion()">Câu tiếp theo</button>
       </div>
     </div>
   </div>
 </div>
-<script>
-// countdown from stackoverflow:))
-// https://stackoverflow.com/questions/20618355/how-to-write-a-countdown-timer-in-javascript
-        window.onload = function() {
-        let timer = 60 * 15,
-        minutes,
-        seconds;
-        const myTimer = setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        const txtContent = document.querySelector("#mytime").textContent = (minutes + ":" + seconds);
-
-        if (--timer < 0) {
-          timer = 60*1;
-        }
-
-        if (txtContent == "00:00") {
-          alert("Hết giờ");
-          clearInterval(myTimer);
-        }
-        }, 1000);
-        };
-</script>
