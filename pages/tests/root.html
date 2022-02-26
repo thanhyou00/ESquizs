@@ -82,8 +82,9 @@
         </div>
       </div>
       <div>
-        <button ng-click="check()" class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Kiểm tra kết quả</button>
-        <button  class="btn btn-primary" role="button" ng-click="nextQuestion()">Câu tiếp theo</button>
+        <button ng-click="check()" class="btn btn-primary" ng-show="!isShow">Kiểm tra kết quả</button>
+        <!-- <button ng-click="check()" class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" ng-show="!isShow">Kiểm tra kết quả</button> -->
+        <button  class="btn btn-primary" role="button" ng-click="nextQuestion()" ng-show="!isShow">Câu tiếp theo</button>
       </div>
     </div>
   </div>

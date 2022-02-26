@@ -38,4 +38,6 @@ html {
     max-width: 900px;
     max-height: 500px;
     margin: auto;
-  }
+}
+/* from https://stackoverflow.com/questions/47789667/table-cells-as-a-password-type */
+.hidetext { -webkit-text-security: disc; /* Default */ }
