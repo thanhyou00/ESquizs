@@ -56,7 +56,7 @@ app.controller("ctrlADAV", function ($scope, $http) {
     $scope.ID++;
     $scope.getApi();
     if($scope.ID > $scope.len) {
-      alert("Hoàn thành bài thi")
+      alert("Hoàn thành bài thi !"+ " Điểm của bạn là : "+$scope.totalMark);
     }
   };
   // function check
