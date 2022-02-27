@@ -97,18 +97,23 @@ app.controller("ctrlAdmin", function ($scope, $http) {
     });
   // HANDLER LOGIN
   $scope.submitLogin = function(event){
-    // event.preventDefault();
+    event.preventDefault();
     $scope.flag = false;
     for (var i = 0; i < $scope.users.length; i++) {
       // Validate
       if ($scope.user.username == $scope.users[i].username &&$scope.user.password == $scope.users[i].password) {
         $scope.flag = true;
-        $scope.user.fullname = $scope.users[i].fullname;
-        console.log($scope.user.fullname);
+        const nameId =  $scope.users[i].fullname;
+        $scope.isLogin = function() {
+          $scope.user.fullname = nameId;
+          console.log($scope.user.fullname);
+        }
       } 
     }
     if($scope.flag) {
       alert("Đăng nhập thành công")
+      window.location.href= "#home";
+      $scope.isLogin();
     } else {
       alert("Sai tên tài khoản hoặc mật khẩu")
     }
