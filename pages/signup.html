@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-12 col-sm-7 pt-5">
       <h2 class="pt-5">ESQUIZ</h2>
-      <form action="" name="formUser" ng-submit="submitSignup($event)" method="post">
+      <form name="formUser" ng-submit="submitSignup($event)" method="get">
         <h2>Đăng ký</h2>
         <div class="row">
           <!-- input -->
@@ -132,11 +132,11 @@
             </div>
           </div>
         </div>
-        <div 
+        <p 
             ng-show="message.length != 0"
             class="col-8 offset-2 alert {{ isSuccess ? 'alert-success' : 'alert-danger' }}">
             {{ message }}
-         </div>
+         </p>
           <!-- check  -->
         <div class="form-check">
           <input

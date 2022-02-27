@@ -143,7 +143,6 @@ app.controller("ctrlAdmin", function ($scope, $http) {
     $scope.isSuccess = false;
     return
   }
-
   // Add new a account
   // Gửi request dạng POST kèm dữ liệu tới API
   $http.post(apiAccount, $scope.user)
@@ -158,7 +157,7 @@ app.controller("ctrlAdmin", function ($scope, $http) {
 
   // ACCOUNT
   $scope.onFormSubmitAccount = function(event){
-    // event.preventDefault();
+    event.preventDefault();
     if($scope.index == -1) {
       // Add new a account
       // Gửi request dạng POST kèm dữ liệu tới API
