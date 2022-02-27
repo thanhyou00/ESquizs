@@ -66,7 +66,6 @@ app.controller("ctrlAdmin", function ($scope, $http) {
   $scope.isSuccess = false;
   $scope.message = "";
   $scope.index = -1;
-  $scope.show = {intro: true};
   // $scope.fullname  ;
 
   // handler API Account
@@ -104,12 +103,10 @@ app.controller("ctrlAdmin", function ($scope, $http) {
       // Validate
       if ($scope.user.username == $scope.users[i].username &&$scope.user.password == $scope.users[i].password) {
         $scope.flag = true;
-        $scope.show.intro = true;
         const nameId =  $scope.users[i].fullname;
         $scope.isLogin = function() {
           $scope.user.fullname = nameId;
           console.log($scope.user.fullname);
-          console.log($scope.show.intro);
         }
       } 
     }
